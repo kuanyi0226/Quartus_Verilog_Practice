@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/intelFPGA_lite/16.1/Lab5_2/simulation/qsim
+vLab5_2_encoder
+Z1 !s110 1666077864
+!i10b 1
+!s100 7LVACeD@gi`[hihbWZgc80
+I=TnmQ=fAQV`^>zdne4[BJ3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1666077862
+8Lab5_2_encoder.vo
+FLab5_2_encoder.vo
+L0 32
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1666077864.000000
+!s107 Lab5_2_encoder.vo|
+!s90 -work|work|Lab5_2_encoder.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@lab5_2_encoder
+vLab5_2_encoder_vlg_vec_tst
+R1
+!i10b 1
+!s100 @X2];3B8DlQlJI;FH`X=G2
+ITeWg?:O=fS@I>9_]c;jAo2
+R2
+R0
+w1666077861
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 30
+R3
+r1
+!s85 0
+31
+R4
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R5
+R6
+n@lab5_2_encoder_vlg_vec_tst
