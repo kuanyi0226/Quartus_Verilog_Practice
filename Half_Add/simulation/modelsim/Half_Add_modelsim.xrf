@@ -1,0 +1,14 @@
+vendor_name = ModelSim
+source_file = 1, C:/Verilog/Half_Add.v
+source_file = 1, C:/Verilog/Waveform.vwf
+source_file = 1, labI_1.vwf
+source_file = 1, C:/Verilog/Waveform1.vwf
+source_file = 1, C:/Verilog/db/Half_Add.cbx.xml
+design_name = Half_Add
+instance = comp, \sum~output , sum~output, Half_Add, 1
+instance = comp, \carry~output , carry~output, Half_Add, 1
+instance = comp, \b~input , b~input, Half_Add, 1
+instance = comp, \a~input , a~input, Half_Add, 1
+instance = comp, \sum~0 , sum~0, Half_Add, 1
+instance = comp, \carry~0 , carry~0, Half_Add, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, Half_Add, 1

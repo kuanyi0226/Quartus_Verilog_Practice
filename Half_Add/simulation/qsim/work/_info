@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Verilog/simulation/qsim
+vHalf_Add
+Z1 !s110 1665470004
+!i10b 1
+!s100 MCUglcFMk]HIQF@@XC^iN1
+I1hSAUllO0<HlI4Tf]4aT91
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1665470004
+8Half_Add.vo
+FHalf_Add.vo
+L0 31
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1665470004.000000
+!s107 Half_Add.vo|
+!s90 -work|work|Half_Add.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@half_@add
+vHalf_Add_vlg_vec_tst
+R1
+!i10b 1
+!s100 WBA>H88VTlLiR1Z13IK?J2
+ITgS^67bHio3gMO`GC0bP40
+R2
+R0
+w1665470003
+8Waveform2.vwf.vt
+FWaveform2.vwf.vt
+L0 29
+R3
+r1
+!s85 0
+31
+R4
+!s107 Waveform2.vwf.vt|
+!s90 -work|work|Waveform2.vwf.vt|
+!i113 1
+R5
+R6
+n@half_@add_vlg_vec_tst

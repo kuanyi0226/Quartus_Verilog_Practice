@@ -1,0 +1,23 @@
+module Full_Add(sum, c_out, a, b, c_in);
+input a, b, c_in;
+output sum, c_out;
+wire w1, w2, w3;
+
+Half_Add u1(w1,w2,a,b);
+Half_Add u2(sum,w3,c_in,w1);
+or u3(c_out,w2,w3);
+
+
+endmodule
+
+//額外定義半加器
+module Half_Add(a,b,sum,carry);
+input a, b;
+output sum, carry;
+
+and u1(carry, a, b);
+xor u2(sum, a, b);
+
+endmodule
+
+
