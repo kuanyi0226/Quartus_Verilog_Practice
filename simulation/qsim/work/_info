@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Verilog/Lab6/simulation/qsim
+vLab6_1_special_multiplier
+Z1 !s110 1666550018
+!i10b 1
+!s100 PR`SA6m`nlhF1cRMj4`@m1
+I]GaQ9PHPQjlXb<QHE2=<W1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1666550016
+8Lab6_1_special_multiplier.vo
+FLab6_1_special_multiplier.vo
+L0 31
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1666550018.000000
+!s107 Lab6_1_special_multiplier.vo|
+!s90 -work|work|Lab6_1_special_multiplier.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@lab6_1_special_multiplier
+vLab6_1_special_multiplier_vlg_vec_tst
+R1
+!i10b 1
+!s100 @]4Z5=`D;8OBfGSBTC6G<1
+IzBjLNgHLKePKa_d3MiCX>1
+R2
+R0
+w1666550015
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 29
+R3
+r1
+!s85 0
+31
+R4
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R5
+R6
+n@lab6_1_special_multiplier_vlg_vec_tst
