@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dC:/Verilog/Lab6/simulation/qsim
 vLab6_1_special_multiplier
-Z1 !s110 1666550018
+Z1 !s110 1666614408
 !i10b 1
-!s100 PR`SA6m`nlhF1cRMj4`@m1
-I]GaQ9PHPQjlXb<QHE2=<W1
+!s100 5EWA1dYVfR9DGVldA>_8:1
+IhZ04W58zhY5XU^<PIBSEi0
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1666550016
+w1666614406
 8Lab6_1_special_multiplier.vo
 FLab6_1_special_multiplier.vo
 L0 31
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1666550018.000000
+Z4 !s108 1666614408.000000
 !s107 Lab6_1_special_multiplier.vo|
 !s90 -work|work|Lab6_1_special_multiplier.vo|
 !i113 1
@@ -37,7 +37,7 @@ R1
 IzBjLNgHLKePKa_d3MiCX>1
 R2
 R0
-w1666550015
+w1666614405
 8Waveform.vwf.vt
 FWaveform.vwf.vt
 L0 29

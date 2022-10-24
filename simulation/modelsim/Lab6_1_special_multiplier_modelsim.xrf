@@ -1,5 +1,6 @@
 vendor_name = ModelSim
 source_file = 1, C:/Verilog/Lab6/Lab6_1_special_multiplier.v
+source_file = 1, Waveform.vwf
 source_file = 1, C:/Verilog/Lab6/db/Lab6_1_special_multiplier.cbx.xml
 design_name = Lab6_1_special_multiplier
 instance = comp, \out[0]~output , out[0]~output, Lab6_1_special_multiplier, 1

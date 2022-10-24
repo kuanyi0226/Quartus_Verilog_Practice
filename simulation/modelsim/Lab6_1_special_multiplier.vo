@@ -16,7 +16,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
 
-// DATE "10/24/2022 02:30:42"
+// DATE "10/24/2022 20:25:03"
 
 // 
 // Device: Altera 5CEFA4F23C7 Package FBGA484
@@ -75,7 +75,7 @@ wire \WideOr0~0_combout ;
 
 // Location: IOOBUF_X52_Y0_N53
 cyclonev_io_obuf \out[0]~output (
-	.i(!\WideOr5~0_combout ),
+	.i(\WideOr5~0_combout ),
 	.oe(vcc),
 	.dynamicterminationcontrol(gnd),
 	.seriesterminationcontrol(16'b0000000000000000),
@@ -91,7 +91,7 @@ defparam \out[0]~output .shift_series_termination_control = "false";
 
 // Location: IOOBUF_X51_Y0_N36
 cyclonev_io_obuf \out[1]~output (
-	.i(!\WideOr4~0_combout ),
+	.i(\WideOr4~0_combout ),
 	.oe(vcc),
 	.dynamicterminationcontrol(gnd),
 	.seriesterminationcontrol(16'b0000000000000000),
@@ -107,7 +107,7 @@ defparam \out[1]~output .shift_series_termination_control = "false";
 
 // Location: IOOBUF_X48_Y0_N76
 cyclonev_io_obuf \out[2]~output (
-	.i(!\out~0_combout ),
+	.i(\out~0_combout ),
 	.oe(vcc),
 	.dynamicterminationcontrol(gnd),
 	.seriesterminationcontrol(16'b0000000000000000),
@@ -123,7 +123,7 @@ defparam \out[2]~output .shift_series_termination_control = "false";
 
 // Location: IOOBUF_X50_Y0_N36
 cyclonev_io_obuf \out[3]~output (
-	.i(!\WideOr3~0_combout ),
+	.i(\WideOr3~0_combout ),
 	.oe(vcc),
 	.dynamicterminationcontrol(gnd),
 	.seriesterminationcontrol(16'b0000000000000000),
@@ -139,7 +139,7 @@ defparam \out[3]~output .shift_series_termination_control = "false";
 
 // Location: IOOBUF_X48_Y0_N93
 cyclonev_io_obuf \out[4]~output (
-	.i(!\WideOr2~0_combout ),
+	.i(\WideOr2~0_combout ),
 	.oe(vcc),
 	.dynamicterminationcontrol(gnd),
 	.seriesterminationcontrol(16'b0000000000000000),
@@ -155,7 +155,7 @@ defparam \out[4]~output .shift_series_termination_control = "false";
 
 // Location: IOOBUF_X50_Y0_N53
 cyclonev_io_obuf \out[5]~output (
-	.i(!\WideOr1~0_combout ),
+	.i(\WideOr1~0_combout ),
 	.oe(vcc),
 	.dynamicterminationcontrol(gnd),
 	.seriesterminationcontrol(16'b0000000000000000),
@@ -171,7 +171,7 @@ defparam \out[5]~output .shift_series_termination_control = "false";
 
 // Location: IOOBUF_X46_Y0_N36
 cyclonev_io_obuf \out[6]~output (
-	.i(\WideOr0~0_combout ),
+	.i(!\WideOr0~0_combout ),
 	.oe(vcc),
 	.dynamicterminationcontrol(gnd),
 	.seriesterminationcontrol(16'b0000000000000000),
