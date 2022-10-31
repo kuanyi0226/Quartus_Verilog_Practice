@@ -1,0 +1,6 @@
+//Seven Display: transfer the counter into seven-seg display
+module SevenDisplay(in)
+input [6:0] in;
+
+
+endmodule

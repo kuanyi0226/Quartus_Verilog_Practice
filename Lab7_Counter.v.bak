@@ -1,0 +1,20 @@
+module Lab7_Counter(clock, reset, Up_Down, out);
+input clock, reset, Up_Down;
+output [6:0] out;
+reg [6:0] out;
+
+
+always @(in)
+begin
+
+
+
+end
+
+endmodule
+
+
+//Transfer the frequency to 1 Hz (instead of 50MHz)
+module Freq_Divider();
+
+endmodule

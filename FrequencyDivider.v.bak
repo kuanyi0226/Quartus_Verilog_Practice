@@ -1,0 +1,9 @@
+//Frequency Divider: Transfer the frequency to 1 Hz (instead of 50MHz)
+module Freq_Divider(clk, rst, div_clk);
+input clk, rst;
+output div_clk;
+reg div_clk;
+reg []
+
+
+endmodule
