@@ -5,7 +5,7 @@ output [3:0] count; //0~15
 
 reg [3:0] count;
 
-always @(clk)
+always @(posedge clk or negedge reset)
 begin 
 	if (!reset)
 	begin

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab7_Counter
-Tue Nov 01 00:39:30 2022
+Tue Nov 01 15:49:17 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,14 +13,13 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Logic Cells Representing Combinational Loops
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Port Connectivity Checks: "SevenDisplay:u_display"
- 12. Port Connectivity Checks: "Counter:u_counter"
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Port Connectivity Checks: "SevenDisplay:u_display"
+ 11. Port Connectivity Checks: "Counter:u_counter"
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -46,13 +45,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Nov 01 00:39:30 2022       ;
+; Analysis & Synthesis Status     ; Successful - Tue Nov 01 15:49:17 2022       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; Lab7_Counter                                ;
 ; Top-level Entity Name           ; Lab7_Counter                                ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
+; Total registers                 ; 37                                          ;
 ; Total pins                      ; 10                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -162,10 +161,11 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -181,59 +181,44 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+------------------------+------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                              ;
-+---------------------------------------------+----------------------------+
-; Resource                                    ; Usage                      ;
-+---------------------------------------------+----------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 5                          ;
-;                                             ;                            ;
-; Combinational ALUT usage for logic          ; 8                          ;
-;     -- 7 input functions                    ; 0                          ;
-;     -- 6 input functions                    ; 1                          ;
-;     -- 5 input functions                    ; 0                          ;
-;     -- 4 input functions                    ; 3                          ;
-;     -- <=3 input functions                  ; 4                          ;
-;                                             ;                            ;
-; Dedicated logic registers                   ; 0                          ;
-;                                             ;                            ;
-; I/O pins                                    ; 10                         ;
-;                                             ;                            ;
-; Total DSP Blocks                            ; 0                          ;
-;                                             ;                            ;
-; Maximum fan-out node                        ; Counter:u_counter|count~12 ;
-; Maximum fan-out                             ; 6                          ;
-; Total fan-out                               ; 43                         ;
-; Average fan-out                             ; 1.54                       ;
-+---------------------------------------------+----------------------------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimate of Logic utilization (ALMs needed) ; 29          ;
+;                                             ;             ;
+; Combinational ALUT usage for logic          ; 52          ;
+;     -- 7 input functions                    ; 0           ;
+;     -- 6 input functions                    ; 6           ;
+;     -- 5 input functions                    ; 1           ;
+;     -- 4 input functions                    ; 8           ;
+;     -- <=3 input functions                  ; 37          ;
+;                                             ;             ;
+; Dedicated logic registers                   ; 37          ;
+;                                             ;             ;
+; I/O pins                                    ; 10          ;
+;                                             ;             ;
+; Total DSP Blocks                            ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; clock~input ;
+; Maximum fan-out                             ; 33          ;
+; Total fan-out                               ; 274         ;
+; Average fan-out                             ; 2.51        ;
++---------------------------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                       ;
-+-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------+--------------+--------------+
-; Compilation Hierarchy Node  ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                  ; Entity Name  ; Library Name ;
-+-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------+--------------+--------------+
-; |Lab7_Counter               ; 8 (0)               ; 0 (0)                     ; 0                 ; 0          ; 10   ; 0            ; |Lab7_Counter                        ; Lab7_Counter ; work         ;
-;    |Counter:u_counter|      ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Lab7_Counter|Counter:u_counter      ; Counter      ; work         ;
-;    |SevenDisplay:u_display| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Lab7_Counter|SevenDisplay:u_display ; SevenDisplay ; work         ;
-+-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------+--------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                   ;
++---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------+------------------+--------------+
+; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                      ; Entity Name      ; Library Name ;
++---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------+------------------+--------------+
+; |Lab7_Counter                   ; 52 (0)              ; 37 (0)                    ; 0                 ; 0          ; 10   ; 0            ; |Lab7_Counter                            ; Lab7_Counter     ; work         ;
+;    |Counter:u_counter|          ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Lab7_Counter|Counter:u_counter          ; Counter          ; work         ;
+;    |FrequencyDivider:u_FreqDiv| ; 41 (41)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |Lab7_Counter|FrequencyDivider:u_FreqDiv ; FrequencyDivider ; work         ;
+;    |SevenDisplay:u_display|     ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Lab7_Counter|SevenDisplay:u_display     ; SevenDisplay     ; work         ;
++---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------+------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------------+
-; Logic Cells Representing Combinational Loops               ;
-+--------------------------------------------------------+---+
-; Logic Cell Name                                        ;   ;
-+--------------------------------------------------------+---+
-; Counter:u_counter|count[3]                             ;   ;
-; Counter:u_counter|count[0]                             ;   ;
-; Counter:u_counter|count~5                              ;   ;
-; Counter:u_counter|count~6                              ;   ;
-; Counter:u_counter|count~7                              ;   ;
-; Counter:u_counter|count~8                              ;   ;
-; Number of logic cells representing combinational loops ; 6 ;
-+--------------------------------------------------------+---+
-Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -241,23 +226,23 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 37    ;
+; Number of registers using Synchronous Clear  ; 32    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 4     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Lab7_Counter|Counter:u_counter|count[2] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Lab7_Counter|FrequencyDivider:u_FreqDiv|count[5] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -283,18 +268,24 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 11                          ;
-;     normal            ; 11                          ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 1                           ;
-;         3 data inputs ; 3                           ;
-;         4 data inputs ; 3                           ;
-;         6 data inputs ; 1                           ;
+; arriav_ff             ; 37                          ;
+;     CLR               ; 4                           ;
+;     SCLR              ; 32                          ;
+;     plain             ; 1                           ;
+; arriav_lcell_comb     ; 53                          ;
+;     arith             ; 32                          ;
+;         1 data inputs ; 32                          ;
+;     normal            ; 21                          ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 8                           ;
+;         5 data inputs ; 1                           ;
+;         6 data inputs ; 6                           ;
 ; boundary_port         ; 10                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 2.18                        ;
+; Max LUT depth         ; 4.10                        ;
+; Average LUT depth     ; 2.93                        ;
 +-----------------------+-----------------------------+
 
 
@@ -313,7 +304,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Nov 01 00:39:22 2022
+    Info: Processing started: Tue Nov 01 15:49:08 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab7_Counter -c Lab7_Counter
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -330,11 +321,7 @@ Info (12127): Elaborating entity "Lab7_Counter" for the top level hierarchy
 Info (12128): Elaborating entity "FrequencyDivider" for hierarchy "FrequencyDivider:u_FreqDiv" File: C:/Verilog/Lab7/Lab7_Counter.v Line: 11
 Warning (10230): Verilog HDL assignment warning at FrequencyDivider.v(16): truncated value with size 32 to match size of target (1) File: C:/Verilog/Lab7/FrequencyDivider.v Line: 16
 Info (12128): Elaborating entity "Counter" for hierarchy "Counter:u_counter" File: C:/Verilog/Lab7/Lab7_Counter.v Line: 12
-Warning (10235): Verilog HDL Always Construct warning at Counter.v(10): variable "reset" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Verilog/Lab7/Counter.v Line: 10
-Warning (10235): Verilog HDL Always Construct warning at Counter.v(17): variable "updown" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Verilog/Lab7/Counter.v Line: 17
-Warning (10235): Verilog HDL Always Construct warning at Counter.v(19): variable "count" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Verilog/Lab7/Counter.v Line: 19
 Warning (10230): Verilog HDL assignment warning at Counter.v(19): truncated value with size 32 to match size of target (4) File: C:/Verilog/Lab7/Counter.v Line: 19
-Warning (10235): Verilog HDL Always Construct warning at Counter.v(24): variable "count" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Verilog/Lab7/Counter.v Line: 24
 Warning (10230): Verilog HDL assignment warning at Counter.v(24): truncated value with size 32 to match size of target (4) File: C:/Verilog/Lab7/Counter.v Line: 24
 Info (12128): Elaborating entity "SevenDisplay" for hierarchy "SevenDisplay:u_display" File: C:/Verilog/Lab7/Lab7_Counter.v Line: 13
 Warning (12011): Net is missing source, defaulting to GND
@@ -342,23 +329,17 @@ Warning (12011): Net is missing source, defaulting to GND
 Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "count[4]" is missing source, defaulting to GND File: C:/Verilog/Lab7/Lab7_Counter.v Line: 7
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "out[1]" is stuck at GND File: C:/Verilog/Lab7/Lab7_Counter.v Line: 3
-    Warning (13410): Pin "out[2]" is stuck at GND File: C:/Verilog/Lab7/Lab7_Counter.v Line: 3
-    Warning (13410): Pin "out[6]" is stuck at VCC File: C:/Verilog/Lab7/Lab7_Counter.v Line: 3
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clock" File: C:/Verilog/Lab7/Lab7_Counter.v Line: 2
-Info (21057): Implemented 18 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 62 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 7 output pins
-    Info (21061): Implemented 8 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 20 warnings
-    Info: Peak virtual memory: 4831 megabytes
-    Info: Processing ended: Tue Nov 01 00:39:30 2022
-    Info: Elapsed time: 00:00:08
+    Info (21061): Implemented 52 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
+    Info: Peak virtual memory: 4896 megabytes
+    Info: Processing ended: Tue Nov 01 15:49:17 2022
+    Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:18
 
 
