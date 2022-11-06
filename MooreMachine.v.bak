@@ -1,0 +1,6 @@
+module MooreMachine(Clk, Reset, In_Data, Out_Data);
+input Clk, Reset, In_Data;
+output []
+
+
+endmodule
