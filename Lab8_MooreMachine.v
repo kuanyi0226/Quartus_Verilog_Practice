@@ -4,7 +4,7 @@ output [6:0] out;
 
 wire [6:0] out; //if not using "always", use wire instead of reg.
 wire div_clock;
-wire [2:0] out_data; //temp store the output data from machine
+wire [3:0] out_data; //temp store the output data from machine
 
 
 
