@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Verilog/Lab9/simulation/qsim
+vLab9_DotMatrixDisplay
+Z1 !s110 1668432724
+!i10b 1
+!s100 ^:MbJ?4CKl6HU:mBZPhjV1
+IaGVUl[5bizFI5cYzjROSl2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1668432723
+8Lab9_DotMatrixDisplay.vo
+FLab9_DotMatrixDisplay.vo
+L0 31
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1668432724.000000
+!s107 Lab9_DotMatrixDisplay.vo|
+!s90 -work|work|Lab9_DotMatrixDisplay.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@lab9_@dot@matrix@display
+vLab9_DotMatrixDisplay_vlg_vec_tst
+R1
+!i10b 1
+!s100 6^8U000M4PlVG<=<EQGzh1
+I3C1?ANHaW=;z@M4Xmf7O[3
+R2
+R0
+w1668432721
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 29
+R3
+r1
+!s85 0
+31
+R4
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R5
+R6
+n@lab9_@dot@matrix@display_vlg_vec_tst

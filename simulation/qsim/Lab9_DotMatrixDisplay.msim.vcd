@@ -1,0 +1,464 @@
+$comment
+	File created using the following command:
+		vcd file Lab9_DotMatrixDisplay.msim.vcd -direction
+$end
+$date
+	Mon Nov 14 21:32:05 2022
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module Lab9_DotMatrixDisplay_vlg_vec_tst $end
+$var reg 1 ! clock $end
+$var reg 1 " reset $end
+$var wire 1 # dot_col [7] $end
+$var wire 1 $ dot_col [6] $end
+$var wire 1 % dot_col [5] $end
+$var wire 1 & dot_col [4] $end
+$var wire 1 ' dot_col [3] $end
+$var wire 1 ( dot_col [2] $end
+$var wire 1 ) dot_col [1] $end
+$var wire 1 * dot_col [0] $end
+$var wire 1 + dot_row [7] $end
+$var wire 1 , dot_row [6] $end
+$var wire 1 - dot_row [5] $end
+$var wire 1 . dot_row [4] $end
+$var wire 1 / dot_row [3] $end
+$var wire 1 0 dot_row [2] $end
+$var wire 1 1 dot_row [1] $end
+$var wire 1 2 dot_row [0] $end
+
+$scope module i1 $end
+$var wire 1 3 gnd $end
+$var wire 1 4 vcc $end
+$var wire 1 5 unknown $end
+$var tri1 1 6 devclrn $end
+$var tri1 1 7 devpor $end
+$var tri1 1 8 devoe $end
+$var wire 1 9 ~QUARTUS_CREATED_GND~I_combout $end
+$var wire 1 : clock~input_o $end
+$var wire 1 ; clock~inputCLKENA0_outclk $end
+$var wire 1 < reset~input_o $end
+$var wire 1 = u_dotmaxtirx|row_count[0]~2_combout $end
+$var wire 1 > u_dotmaxtirx|row_count[0]~DUPLICATE_q $end
+$var wire 1 ? u_dotmaxtirx|row_count[1]~1_combout $end
+$var wire 1 @ u_dotmaxtirx|row_count[1]~DUPLICATE_q $end
+$var wire 1 A u_dotmaxtirx|row_count[2]~0_combout $end
+$var wire 1 B u_dotmaxtirx|row_count[2]~DUPLICATE_q $end
+$var wire 1 C u_dotmaxtirx|Decoder0~0_combout $end
+$var wire 1 D u_dotmaxtirx|Decoder0~1_combout $end
+$var wire 1 E u_dotmaxtirx|Decoder0~2_combout $end
+$var wire 1 F u_dotmaxtirx|Decoder0~3_combout $end
+$var wire 1 G u_dotmaxtirx|Decoder0~4_combout $end
+$var wire 1 H u_dotmaxtirx|dot_row[4]~4_combout $end
+$var wire 1 I u_dotmaxtirx|Decoder0~5_combout $end
+$var wire 1 J u_dotmaxtirx|Decoder0~6_combout $end
+$var wire 1 K u_dotmaxtirx|Decoder0~7_combout $end
+$var wire 1 L u_dotmaxtirx|Decoder0~8_combout $end
+$var wire 1 M u_dotmaxtirx|dot_col[1]~feeder_combout $end
+$var wire 1 N u_dotmaxtirx|dot_col~0_combout $end
+$var wire 1 O u_dotmaxtirx|dot_col[2]~feeder_combout $end
+$var wire 1 P u_dotmaxtirx|dot_col~1_combout $end
+$var wire 1 Q u_dotmaxtirx|dot_col[3]~feeder_combout $end
+$var wire 1 R u_dotmaxtirx|dot_row [7] $end
+$var wire 1 S u_dotmaxtirx|dot_row [6] $end
+$var wire 1 T u_dotmaxtirx|dot_row [5] $end
+$var wire 1 U u_dotmaxtirx|dot_row [4] $end
+$var wire 1 V u_dotmaxtirx|dot_row [3] $end
+$var wire 1 W u_dotmaxtirx|dot_row [2] $end
+$var wire 1 X u_dotmaxtirx|dot_row [1] $end
+$var wire 1 Y u_dotmaxtirx|dot_row [0] $end
+$var wire 1 Z u_dotmaxtirx|dot_col [7] $end
+$var wire 1 [ u_dotmaxtirx|dot_col [6] $end
+$var wire 1 \ u_dotmaxtirx|dot_col [5] $end
+$var wire 1 ] u_dotmaxtirx|dot_col [4] $end
+$var wire 1 ^ u_dotmaxtirx|dot_col [3] $end
+$var wire 1 _ u_dotmaxtirx|dot_col [2] $end
+$var wire 1 ` u_dotmaxtirx|dot_col [1] $end
+$var wire 1 a u_dotmaxtirx|dot_col [0] $end
+$var wire 1 b u_dotmaxtirx|row_count [2] $end
+$var wire 1 c u_dotmaxtirx|row_count [1] $end
+$var wire 1 d u_dotmaxtirx|row_count [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0*
+0)
+0(
+0'
+0&
+0%
+0$
+0#
+02
+01
+00
+0/
+0.
+0-
+0,
+0+
+03
+14
+x5
+16
+17
+18
+09
+0:
+0;
+0<
+1=
+0>
+0?
+0@
+0A
+0B
+1C
+1D
+1E
+1F
+0G
+1H
+1I
+1J
+0K
+0L
+0M
+0N
+0O
+1P
+1Q
+0Y
+0X
+0W
+0V
+0U
+0T
+0S
+0R
+0a
+0`
+0_
+0^
+0]
+0\
+0[
+0Z
+0d
+0c
+0b
+$end
+#10000
+1!
+1"
+1:
+1<
+1;
+1>
+1d
+1]
+1^
+1S
+1T
+1U
+1V
+1W
+1X
+1Y
+12
+11
+10
+1/
+1.
+1-
+1,
+1'
+1&
+0P
+0=
+1N
+1K
+0J
+1?
+1O
+0Q
+#20000
+0!
+0:
+0;
+#30000
+1!
+1:
+1;
+1@
+1c
+0>
+0d
+1\
+0]
+0^
+1_
+1R
+0S
+0,
+1+
+1(
+0'
+0&
+1%
+0I
+1=
+0N
+1J
+1L
+1M
+0O
+#40000
+0!
+0:
+0;
+#50000
+1!
+1:
+1;
+1>
+1d
+1[
+0\
+0_
+1`
+1S
+0T
+0-
+1,
+1)
+0(
+0%
+1$
+1I
+1G
+0=
+1A
+0?
+0H
+#60000
+0!
+0:
+0;
+#70000
+1!
+1:
+1;
+1B
+0@
+0c
+1b
+0>
+0d
+1Z
+1a
+1T
+0U
+0.
+1-
+1*
+1#
+0G
+1=
+0F
+1H
+#80000
+0!
+0:
+0;
+#90000
+1!
+1:
+1;
+1>
+1d
+0Z
+0a
+1U
+0V
+0/
+1.
+0*
+0#
+0=
+1F
+0E
+1?
+#100000
+0!
+0:
+0;
+#110000
+1!
+1:
+1;
+1@
+1c
+0>
+0d
+1V
+0W
+00
+1/
+1=
+1E
+0D
+#120000
+0!
+0:
+0;
+#130000
+1!
+1:
+1;
+1>
+1d
+1W
+0X
+01
+10
+1P
+0=
+1N
+1D
+0C
+0A
+0?
+1O
+1Q
+#140000
+0!
+0:
+0;
+#150000
+1!
+1:
+1;
+0B
+0@
+0c
+0b
+0>
+0d
+1\
+1]
+1^
+1_
+1X
+0Y
+02
+11
+1(
+1'
+1&
+1%
+1=
+0N
+0K
+1C
+0L
+0M
+0O
+#160000
+0!
+0:
+0;
+#170000
+1!
+1:
+1;
+1>
+1d
+0[
+0\
+0_
+0`
+0R
+1Y
+12
+0+
+0)
+0(
+0%
+0$
+0P
+0=
+1N
+1K
+0J
+1?
+1O
+0Q
+#180000
+0"
+0!
+0<
+0:
+0;
+0d
+0>
+0Y
+0X
+0W
+0V
+0U
+0T
+0S
+0^
+0]
+0&
+0'
+0,
+0-
+0.
+0/
+00
+01
+02
+0N
+0K
+1J
+0?
+1P
+1=
+1Q
+0O
+#190000
+1!
+1:
+1;
+#200000
+0!
+0:
+0;
+#210000
+1!
+1:
+1;
+#220000
+0!
+0:
+0;
+#230000
+1!
+1:
+1;
+#240000
+0!
+0:
+0;
+#1000000

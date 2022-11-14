@@ -1,0 +1,13 @@
+//main
+module Lab9_DotMartixDisplay(clock, reset, dot_row, dot_col);
+input clock, reset;
+output [7:0] dot_row;
+output [7:0] dot_col;
+
+wire div_clock;
+wire [7:0] dot_row;
+wire [7:0] dot_col;
+
+endmodule
+
+
