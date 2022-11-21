@@ -16,9 +16,9 @@ wire [6:0] out;
 FrequencyDivider1 u_FreqDiv1(.clk(clock), .rst(reset), .div_clk(div_clock1));
 FrequencyDivider2 u_FreqDiv2(.clk(clock), .rst(reset), .div_clk(div_clock2));
 
-Counter u_counter(.clk(clock), .reset(reset), .count(count), .gyr(gyr));
+Counter u_counter(.clk(div_clock1), .reset(reset), .count(count), .gyr(gyr));
 SevenDisplay u_sevenDisplay(.count(count), .out(out));
 
-DotMatrixController u_dotMatirx(.div_clk(clock), .rst(reset), .gyr(gyr), .dot_row(dot_row), .dot_col(dot_col));
+DotMatrixController u_dotMatirx(.div_clk(div_clock2), .rst(reset), .gyr(gyr), .dot_row(dot_row), .dot_col(dot_col));
 
 endmodule

@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "11/21/2022 00:00:14"
+// Generated on "11/21/2022 21:14:33"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          Lab10_Traffic_Light
 // 
@@ -104,6 +104,55 @@ begin
 	clock = #10000 1'b0;
 	clock = #10000 1'b1;
 	clock = #10000 1'b0;
+	clock = #10000 1'b1;
+	clock = #10000 1'b0;
+	clock = #10000 1'b1;
+	clock = #10000 1'b0;
+	clock = #10000 1'b1;
+	clock = #10000 1'b0;
+	clock = #10000 1'b1;
+	clock = #10000 1'b0;
+	clock = #10000 1'b1;
+	clock = #10000 1'b0;
+	clock = #10000 1'b1;
+	clock = #10000 1'b0;
+	clock = #10000 1'b1;
+	clock = #10000 1'b0;
+	clock = #10000 1'b1;
+	clock = #10000 1'b0;
+	clock = #10000 1'b1;
+	clock = #10000 1'b0;
+	clock = #10000 1'b1;
+	clock = #10000 1'b0;
+	clock = #10000 1'b1;
+	clock = #10000 1'b0;
+	clock = #10000 1'b1;
+	clock = #10000 1'b0;
+	clock = #10000 1'b1;
+	clock = #10000 1'b0;
+	clock = #10000 1'b1;
+	clock = #10000 1'b0;
+	clock = #10000 1'b1;
+	clock = #10000 1'b0;
+	clock = #10000 1'b1;
+	clock = #10000 1'b0;
+	clock = #10000 1'b1;
+	clock = #10000 1'b0;
+	clock = #10000 1'b1;
+	clock = #10000 1'b0;
+	clock = #10000 1'b1;
+	clock = #10000 1'b0;
+	clock = #10000 1'b1;
+	clock = #10000 1'b0;
+	clock = #10000 1'b1;
+	clock = #10000 1'b0;
+	clock = #10000 1'b1;
+	clock = #10000 1'b0;
+	clock = #10000 1'b1;
+	clock = #10000 1'b0;
+	clock = #10000 1'b1;
+	clock = #10000 1'b0;
+	clock = #10000 1'b1;
 end 
 
 // reset
@@ -111,7 +160,7 @@ initial
 begin
 	reset = 1'b0;
 	reset = #40000 1'b1;
-	reset = #430000 1'b0;
+	reset = #930000 1'b0;
 end 
 endmodule
 

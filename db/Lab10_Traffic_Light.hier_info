@@ -1,5 +1,5 @@
 |Lab10_Traffic_Light
-clock => clock.IN4
+clock => clock.IN2
 reset => reset.IN4
 dot_row[0] << DotMatrixController:u_dotMatirx.dot_row
 dot_row[1] << DotMatrixController:u_dotMatirx.dot_row

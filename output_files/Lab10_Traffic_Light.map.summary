@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Sun Nov 20 23:59:24 2022
+Analysis & Synthesis Status : Successful - Mon Nov 21 21:29:15 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Lab10_Traffic_Light
 Top-level Entity Name : Lab10_Traffic_Light
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 37
+Total registers : 103
 Total pins : 25
 Total virtual pins : 0
 Total block memory bits : 0
