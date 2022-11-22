@@ -1,0 +1,6 @@
+
+State Machine - |Lab10_Traffic_Light|Counter:u_counter|temp_gyr
+Name temp_gyr.00 temp_gyr.10 temp_gyr.01 
+temp_gyr.00 0 0 0 
+temp_gyr.01 1 0 1 
+temp_gyr.10 1 1 0 

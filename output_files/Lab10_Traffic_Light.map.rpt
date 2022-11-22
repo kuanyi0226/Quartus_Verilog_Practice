@@ -1,6 +1,6 @@
 Analysis & Synthesis report for Lab10_Traffic_Light
-Tue Nov 22 14:38:13 2022
-Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Tue Nov 22 15:45:37 2022
+Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
 ---------------------
@@ -13,19 +13,21 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Inverted Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  8. State Machine - |Lab10_Traffic_Light|Counter:u_counter|temp_gyr
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2018  Intel Corporation. All rights reserved.
+Copyright (C) 2016  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -33,24 +35,25 @@ functions, and any output files from any of the foregoing
 associated documentation or information are expressly subject 
 to the terms and conditions of the Intel Program License 
 Subscription Agreement, the Intel Quartus Prime License Agreement,
-the Intel FPGA IP License Agreement, or other applicable license
-agreement, including, without limitation, that your use is for
-the sole purpose of programming logic devices manufactured by
-Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details.
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
 
 
 
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Nov 22 14:38:13 2022       ;
-; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Analysis & Synthesis Status     ; Successful - Tue Nov 22 15:45:37 2022       ;
+; Quartus Prime Version           ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                   ; Lab10_Traffic_Light                         ;
 ; Top-level Entity Name           ; Lab10_Traffic_Light                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 103                                         ;
+; Total registers                 ; 105                                         ;
 ; Total pins                      ; 25                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -73,13 +76,13 @@ refer to the applicable agreement for further details.
 ; Top-level entity name                                                           ; Lab10_Traffic_Light ; Lab10_Traffic_Light ;
 ; Family name                                                                     ; Cyclone V           ; Cyclone V           ;
 ; Use smart compilation                                                           ; Off                 ; Off                 ;
-; Enable parallel Assembler and Timing Analyzer during compilation                ; On                  ; On                  ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                  ; On                  ;
 ; Enable compact report table                                                     ; Off                 ; Off                 ;
 ; Restructure Multiplexers                                                        ; Auto                ; Auto                ;
 ; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                 ; Off                 ;
 ; Create Debugging Nodes for IP Cores                                             ; Off                 ; Off                 ;
 ; Preserve fewer node names                                                       ; On                  ; On                  ;
-; Intel FPGA IP Evaluation Mode                                                   ; Enable              ; Enable              ;
+; OpenCore Plus hardware evaluation                                               ; Enable              ; Enable              ;
 ; Verilog Version                                                                 ; Verilog_2001        ; Verilog_2001        ;
 ; VHDL Version                                                                    ; VHDL_1993           ; VHDL_1993           ;
 ; State Machine Processing                                                        ; Auto                ; Auto                ;
@@ -130,7 +133,7 @@ refer to the applicable agreement for further details.
 ; Report Connectivity Checks                                                      ; On                  ; On                  ;
 ; Ignore Maximum Fan-Out Assignments                                              ; Off                 ; Off                 ;
 ; Synchronization Register Chain Length                                           ; 3                   ; 3                   ;
-; Power Optimization During Synthesis                                             ; Normal compilation  ; Normal compilation  ;
+; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation  ; Normal compilation  ;
 ; HDL message level                                                               ; Level2              ; Level2              ;
 ; Suppress Register Optimization Related Messages                                 ; Off                 ; Off                 ;
 ; Number of Removed Registers Reported in Synthesis Report                        ; 5000                ; 5000                ;
@@ -157,29 +160,29 @@ refer to the applicable agreement for further details.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
+; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 16          ;
+; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-16        ;   0.0%      ;
+;     Processors 2-8         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path           ; Library ;
-+----------------------------------+-----------------+------------------------+----------------------------------------+---------+
-; Lab10_Traffic_Light.v            ; yes             ; User Verilog HDL File  ; C:/Verilog/Lab10/Lab10_Traffic_Light.v ;         ;
-; FrequencyDivider1.v              ; yes             ; User Verilog HDL File  ; C:/Verilog/Lab10/FrequencyDivider1.v   ;         ;
-; FrequencyDivider2.v              ; yes             ; User Verilog HDL File  ; C:/Verilog/Lab10/FrequencyDivider2.v   ;         ;
-; DotMatrixController.v            ; yes             ; User Verilog HDL File  ; C:/Verilog/Lab10/DotMatrixController.v ;         ;
-; SevenDisplay.v                   ; yes             ; User Verilog HDL File  ; C:/Verilog/Lab10/SevenDisplay.v        ;         ;
-; Counter.v                        ; yes             ; User Verilog HDL File  ; C:/Verilog/Lab10/Counter.v             ;         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                    ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                      ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------+---------+
+; Lab10_Traffic_Light.v            ; yes             ; User Verilog HDL File  ; C:/Users/user/Desktop/Lab10/Lab10_Traffic_Light.v ;         ;
+; FrequencyDivider1.v              ; yes             ; User Verilog HDL File  ; C:/Users/user/Desktop/Lab10/FrequencyDivider1.v   ;         ;
+; FrequencyDivider2.v              ; yes             ; User Verilog HDL File  ; C:/Users/user/Desktop/Lab10/FrequencyDivider2.v   ;         ;
+; DotMatrixController.v            ; yes             ; User Verilog HDL File  ; C:/Users/user/Desktop/Lab10/DotMatrixController.v ;         ;
+; SevenDisplay.v                   ; yes             ; User Verilog HDL File  ; C:/Users/user/Desktop/Lab10/SevenDisplay.v        ;         ;
+; Counter.v                        ; yes             ; User Verilog HDL File  ; C:/Users/user/Desktop/Lab10/Counter.v             ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -187,16 +190,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 73          ;
+; Estimate of Logic utilization (ALMs needed) ; 72          ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 133         ;
+; Combinational ALUT usage for logic          ; 129         ;
 ;     -- 7 input functions                    ; 0           ;
 ;     -- 6 input functions                    ; 13          ;
-;     -- 5 input functions                    ; 8           ;
-;     -- 4 input functions                    ; 21          ;
-;     -- <=3 input functions                  ; 91          ;
+;     -- 5 input functions                    ; 14          ;
+;     -- 4 input functions                    ; 13          ;
+;     -- <=3 input functions                  ; 89          ;
 ;                                             ;             ;
-; Dedicated logic registers                   ; 103         ;
+; Dedicated logic registers                   ; 105         ;
 ;                                             ;             ;
 ; I/O pins                                    ; 25          ;
 ;                                             ;             ;
@@ -204,8 +207,8 @@ refer to the applicable agreement for further details.
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clock~input ;
 ; Maximum fan-out                             ; 66          ;
-; Total fan-out                               ; 765         ;
-; Average fan-out                             ; 2.67        ;
+; Total fan-out                               ; 760         ;
+; Average fan-out                             ; 2.68        ;
 +---------------------------------------------+-------------+
 
 
@@ -214,9 +217,9 @@ refer to the applicable agreement for further details.
 +--------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node           ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                  ; Entity Name         ; Library Name ;
 +--------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------+---------------------+--------------+
-; |Lab10_Traffic_Light                 ; 133 (0)             ; 103 (0)                   ; 0                 ; 0          ; 25   ; 0            ; |Lab10_Traffic_Light                                 ; Lab10_Traffic_Light ; work         ;
-;    |Counter:u_counter|               ; 23 (23)             ; 18 (18)                   ; 0                 ; 0          ; 0    ; 0            ; |Lab10_Traffic_Light|Counter:u_counter               ; Counter             ; work         ;
-;    |DotMatrixController:u_dotMatirx| ; 21 (21)             ; 19 (19)                   ; 0                 ; 0          ; 0    ; 0            ; |Lab10_Traffic_Light|DotMatrixController:u_dotMatirx ; DotMatrixController ; work         ;
+; |Lab10_Traffic_Light                 ; 129 (0)             ; 105 (0)                   ; 0                 ; 0          ; 25   ; 0            ; |Lab10_Traffic_Light                                 ; Lab10_Traffic_Light ; work         ;
+;    |Counter:u_counter|               ; 21 (21)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |Lab10_Traffic_Light|Counter:u_counter               ; Counter             ; work         ;
+;    |DotMatrixController:u_dotMatirx| ; 19 (19)             ; 19 (19)                   ; 0                 ; 0          ; 0    ; 0            ; |Lab10_Traffic_Light|DotMatrixController:u_dotMatirx ; DotMatrixController ; work         ;
 ;    |FrequencyDivider1:u_FreqDiv1|    ; 41 (41)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |Lab10_Traffic_Light|FrequencyDivider1:u_FreqDiv1    ; FrequencyDivider1   ; work         ;
 ;    |FrequencyDivider2:u_FreqDiv2|    ; 41 (41)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |Lab10_Traffic_Light|FrequencyDivider2:u_FreqDiv2    ; FrequencyDivider2   ; work         ;
 ;    |SevenDisplay:u_sevenDisplay|     ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Lab10_Traffic_Light|SevenDisplay:u_sevenDisplay     ; SevenDisplay        ; work         ;
@@ -224,17 +227,39 @@ refer to the applicable agreement for further details.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
+Encoding Type:  One-Hot
++-----------------------------------------------------------------+
+; State Machine - |Lab10_Traffic_Light|Counter:u_counter|temp_gyr ;
++-------------+-------------+-------------+-----------------------+
+; Name        ; temp_gyr.00 ; temp_gyr.10 ; temp_gyr.01           ;
++-------------+-------------+-------------+-----------------------+
+; temp_gyr.00 ; 0           ; 0           ; 0                     ;
+; temp_gyr.01 ; 1           ; 0           ; 1                     ;
+; temp_gyr.10 ; 1           ; 1           ; 0                     ;
++-------------+-------------+-------------+-----------------------+
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; Counter:u_counter|y_count[3]          ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 1 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 103   ;
+; Total registers                              ; 105   ;
 ; Number of registers using Synchronous Clear  ; 66    ;
-; Number of registers using Synchronous Load   ; 4     ;
-; Number of registers using Asynchronous Clear ; 33    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 35    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 15    ;
+; Number of registers using Clock Enable       ; 14    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -244,14 +269,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; Counter:u_counter|y_count[0]           ; 6       ;
-; Counter:u_counter|g_count[0]           ; 6       ;
-; Counter:u_counter|g_count[1]           ; 5       ;
+; Counter:u_counter|y_count[0]           ; 5       ;
+; Counter:u_counter|g_count[0]           ; 7       ;
 ; Counter:u_counter|r_count[1]           ; 6       ;
-; Counter:u_counter|y_count[2]           ; 5       ;
-; Counter:u_counter|g_count[2]           ; 4       ;
-; Counter:u_counter|g_count[3]           ; 3       ;
+; Counter:u_counter|g_count[1]           ; 6       ;
+; Counter:u_counter|y_count[2]           ; 4       ;
+; Counter:u_counter|g_count[2]           ; 5       ;
 ; Counter:u_counter|r_count[3]           ; 5       ;
+; Counter:u_counter|g_count[3]           ; 4       ;
 ; Total number of inverted registers = 8 ;         ;
 +----------------------------------------+---------+
 
@@ -261,11 +286,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Lab10_Traffic_Light|FrequencyDivider2:u_FreqDiv2|count[17]     ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Lab10_Traffic_Light|FrequencyDivider1:u_FreqDiv1|count[27]     ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Lab10_Traffic_Light|Counter:u_counter|count[0]                 ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Lab10_Traffic_Light|FrequencyDivider1:u_FreqDiv1|count[17]     ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Lab10_Traffic_Light|FrequencyDivider2:u_FreqDiv2|count[27]     ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Lab10_Traffic_Light|Counter:u_counter|count[1]                 ;
 ; 10:1               ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; Yes        ; |Lab10_Traffic_Light|DotMatrixController:u_dotMatirx|dot_col[2] ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Lab10_Traffic_Light|Counter:u_counter|gyr[0]                   ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |Lab10_Traffic_Light|Counter:u_counter|Selector5                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
 
 
@@ -274,25 +299,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 103                         ;
-;     CLR               ; 22                          ;
-;     ENA CLR           ; 11                          ;
-;     ENA SLD           ; 4                           ;
+; arriav_ff             ; 105                         ;
+;     CLR               ; 25                          ;
+;     ENA               ; 4                           ;
+;     ENA CLR           ; 10                          ;
 ;     SCLR              ; 66                          ;
-; arriav_lcell_comb     ; 134                         ;
+; arriav_lcell_comb     ; 130                         ;
 ;     arith             ; 64                          ;
 ;         1 data inputs ; 64                          ;
-;     normal            ; 70                          ;
-;         1 data inputs ; 6                           ;
-;         2 data inputs ; 10                          ;
-;         3 data inputs ; 12                          ;
-;         4 data inputs ; 21                          ;
-;         5 data inputs ; 8                           ;
+;     normal            ; 66                          ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 8                           ;
+;         3 data inputs ; 14                          ;
+;         4 data inputs ; 13                          ;
+;         5 data inputs ; 14                          ;
 ;         6 data inputs ; 13                          ;
 ; boundary_port         ; 25                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.10                        ;
-; Average LUT depth     ; 2.57                        ;
+; Average LUT depth     ; 2.59                        ;
 +-----------------------+-----------------------------+
 
 
@@ -310,49 +335,50 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Nov 22 14:38:05 2022
+    Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+    Info: Processing started: Tue Nov 22 15:45:30 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab10_Traffic_Light -c Lab10_Traffic_Light
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file lab10_traffic_light.v
-    Info (12023): Found entity 1: Lab10_Traffic_Light File: C:/Verilog/Lab10/Lab10_Traffic_Light.v Line: 2
+    Info (12023): Found entity 1: Lab10_Traffic_Light File: C:/Users/user/Desktop/Lab10/Lab10_Traffic_Light.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file frequencydivider1.v
-    Info (12023): Found entity 1: FrequencyDivider1 File: C:/Verilog/Lab10/FrequencyDivider1.v Line: 5
-Warning (10274): Verilog HDL macro warning at FrequencyDivider2.v(4): overriding existing definition for macro "TimeExpire", which was defined in "FrequencyDivider1.v", line 4 File: C:/Verilog/Lab10/FrequencyDivider2.v Line: 4
+    Info (12023): Found entity 1: FrequencyDivider1 File: C:/Users/user/Desktop/Lab10/FrequencyDivider1.v Line: 5
+Warning (10274): Verilog HDL macro warning at FrequencyDivider2.v(4): overriding existing definition for macro "TimeExpire", which was defined in "FrequencyDivider1.v", line 4 File: C:/Users/user/Desktop/Lab10/FrequencyDivider2.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file frequencydivider2.v
-    Info (12023): Found entity 1: FrequencyDivider2 File: C:/Verilog/Lab10/FrequencyDivider2.v Line: 5
+    Info (12023): Found entity 1: FrequencyDivider2 File: C:/Users/user/Desktop/Lab10/FrequencyDivider2.v Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file dotmatrixcontroller.v
-    Info (12023): Found entity 1: DotMatrixController File: C:/Verilog/Lab10/DotMatrixController.v Line: 1
+    Info (12023): Found entity 1: DotMatrixController File: C:/Users/user/Desktop/Lab10/DotMatrixController.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sevendisplay.v
-    Info (12023): Found entity 1: SevenDisplay File: C:/Verilog/Lab10/SevenDisplay.v Line: 2
+    Info (12023): Found entity 1: SevenDisplay File: C:/Users/user/Desktop/Lab10/SevenDisplay.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file counter.v
-    Info (12023): Found entity 1: Counter File: C:/Verilog/Lab10/Counter.v Line: 2
+    Info (12023): Found entity 1: Counter File: C:/Users/user/Desktop/Lab10/Counter.v Line: 2
 Info (12127): Elaborating entity "Lab10_Traffic_Light" for the top level hierarchy
-Info (12128): Elaborating entity "FrequencyDivider1" for hierarchy "FrequencyDivider1:u_FreqDiv1" File: C:/Verilog/Lab10/Lab10_Traffic_Light.v Line: 16
-Warning (10230): Verilog HDL assignment warning at FrequencyDivider1.v(17): truncated value with size 32 to match size of target (1) File: C:/Verilog/Lab10/FrequencyDivider1.v Line: 17
-Info (12128): Elaborating entity "FrequencyDivider2" for hierarchy "FrequencyDivider2:u_FreqDiv2" File: C:/Verilog/Lab10/Lab10_Traffic_Light.v Line: 17
-Warning (10230): Verilog HDL assignment warning at FrequencyDivider2.v(17): truncated value with size 32 to match size of target (1) File: C:/Verilog/Lab10/FrequencyDivider2.v Line: 17
-Info (12128): Elaborating entity "Counter" for hierarchy "Counter:u_counter" File: C:/Verilog/Lab10/Lab10_Traffic_Light.v Line: 19
-Warning (10230): Verilog HDL assignment warning at Counter.v(28): truncated value with size 32 to match size of target (4) File: C:/Verilog/Lab10/Counter.v Line: 28
-Warning (10230): Verilog HDL assignment warning at Counter.v(36): truncated value with size 32 to match size of target (4) File: C:/Verilog/Lab10/Counter.v Line: 36
-Warning (10230): Verilog HDL assignment warning at Counter.v(45): truncated value with size 32 to match size of target (4) File: C:/Verilog/Lab10/Counter.v Line: 45
-Info (12128): Elaborating entity "SevenDisplay" for hierarchy "SevenDisplay:u_sevenDisplay" File: C:/Verilog/Lab10/Lab10_Traffic_Light.v Line: 20
-Info (12128): Elaborating entity "DotMatrixController" for hierarchy "DotMatrixController:u_dotMatirx" File: C:/Verilog/Lab10/Lab10_Traffic_Light.v Line: 22
-Warning (10230): Verilog HDL assignment warning at DotMatrixController.v(22): truncated value with size 32 to match size of target (3) File: C:/Verilog/Lab10/DotMatrixController.v Line: 22
-Warning (10230): Verilog HDL assignment warning at DotMatrixController.v(46): truncated value with size 32 to match size of target (3) File: C:/Verilog/Lab10/DotMatrixController.v Line: 46
-Warning (10230): Verilog HDL assignment warning at DotMatrixController.v(71): truncated value with size 32 to match size of target (3) File: C:/Verilog/Lab10/DotMatrixController.v Line: 71
+Info (12128): Elaborating entity "FrequencyDivider1" for hierarchy "FrequencyDivider1:u_FreqDiv1" File: C:/Users/user/Desktop/Lab10/Lab10_Traffic_Light.v Line: 16
+Warning (10230): Verilog HDL assignment warning at FrequencyDivider1.v(17): truncated value with size 32 to match size of target (1) File: C:/Users/user/Desktop/Lab10/FrequencyDivider1.v Line: 17
+Info (12128): Elaborating entity "FrequencyDivider2" for hierarchy "FrequencyDivider2:u_FreqDiv2" File: C:/Users/user/Desktop/Lab10/Lab10_Traffic_Light.v Line: 17
+Warning (10230): Verilog HDL assignment warning at FrequencyDivider2.v(17): truncated value with size 32 to match size of target (1) File: C:/Users/user/Desktop/Lab10/FrequencyDivider2.v Line: 17
+Info (12128): Elaborating entity "Counter" for hierarchy "Counter:u_counter" File: C:/Users/user/Desktop/Lab10/Lab10_Traffic_Light.v Line: 19
+Warning (10230): Verilog HDL assignment warning at Counter.v(31): truncated value with size 32 to match size of target (4) File: C:/Users/user/Desktop/Lab10/Counter.v Line: 31
+Warning (10230): Verilog HDL assignment warning at Counter.v(40): truncated value with size 32 to match size of target (4) File: C:/Users/user/Desktop/Lab10/Counter.v Line: 40
+Warning (10230): Verilog HDL assignment warning at Counter.v(50): truncated value with size 32 to match size of target (4) File: C:/Users/user/Desktop/Lab10/Counter.v Line: 50
+Info (10264): Verilog HDL Case Statement information at Counter.v(28): all case item expressions in this case statement are onehot File: C:/Users/user/Desktop/Lab10/Counter.v Line: 28
+Info (12128): Elaborating entity "SevenDisplay" for hierarchy "SevenDisplay:u_sevenDisplay" File: C:/Users/user/Desktop/Lab10/Lab10_Traffic_Light.v Line: 20
+Info (12128): Elaborating entity "DotMatrixController" for hierarchy "DotMatrixController:u_dotMatirx" File: C:/Users/user/Desktop/Lab10/Lab10_Traffic_Light.v Line: 22
+Warning (10230): Verilog HDL assignment warning at DotMatrixController.v(22): truncated value with size 32 to match size of target (3) File: C:/Users/user/Desktop/Lab10/DotMatrixController.v Line: 22
+Warning (10230): Verilog HDL assignment warning at DotMatrixController.v(46): truncated value with size 32 to match size of target (3) File: C:/Users/user/Desktop/Lab10/DotMatrixController.v Line: 46
+Warning (10230): Verilog HDL assignment warning at DotMatrixController.v(71): truncated value with size 32 to match size of target (3) File: C:/Users/user/Desktop/Lab10/DotMatrixController.v Line: 71
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 158 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 156 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 23 output pins
-    Info (21061): Implemented 133 logic cells
+    Info (21061): Implemented 131 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 4896 megabytes
-    Info: Processing ended: Tue Nov 22 14:38:13 2022
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:18
+    Info: Peak virtual memory: 4859 megabytes
+    Info: Processing ended: Tue Nov 22 15:45:37 2022
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:16
 
 

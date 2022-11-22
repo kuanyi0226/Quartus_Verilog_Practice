@@ -21,4 +21,4 @@ SevenDisplay u_sevenDisplay(.count(count), .out(out));
 
 DotMatrixController u_dotMatirx(.div_clk(div_clock2), .rst(reset), .gyr(gyr), .dot_row(dot_row), .dot_col(dot_col));
 
-endmodule
+endmodule 

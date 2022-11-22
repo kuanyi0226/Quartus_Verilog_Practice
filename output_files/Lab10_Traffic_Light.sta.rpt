@@ -1,13 +1,13 @@
-Timing Analyzer report for Lab10_Traffic_Light
-Tue Nov 22 14:38:47 2022
-Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+TimeQuest Timing Analyzer report for Lab10_Traffic_Light
+Tue Nov 22 15:46:01 2022
+Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
 ---------------------
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Timing Analyzer Summary
+  2. TimeQuest Timing Analyzer Summary
   3. Parallel Compilation
   4. Clocks
   5. Slow 1100mV 85C Model Fmax Summary
@@ -54,14 +54,14 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  46. Unconstrained Output Ports
  47. Unconstrained Input Ports
  48. Unconstrained Output Ports
- 49. Timing Analyzer Messages
+ 49. TimeQuest Timing Analyzer Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2018  Intel Corporation. All rights reserved.
+Copyright (C) 2016  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -69,19 +69,20 @@ functions, and any output files from any of the foregoing
 associated documentation or information are expressly subject 
 to the terms and conditions of the Intel Program License 
 Subscription Agreement, the Intel Quartus Prime License Agreement,
-the Intel FPGA IP License Agreement, or other applicable license
-agreement, including, without limitation, that your use is for
-the sole purpose of programming logic devices manufactured by
-Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details.
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
 
 
 
 +-----------------------------------------------------------------------------+
-; Timing Analyzer Summary                                                     ;
+; TimeQuest Timing Analyzer Summary                                           ;
 +-----------------------+-----------------------------------------------------+
-; Quartus Prime Version ; Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
-; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Quartus Prime Version ; Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
+; Timing Analyzer       ; TimeQuest                                           ;
 ; Revision Name         ; Lab10_Traffic_Light                                 ;
 ; Device Family         ; Cyclone V                                           ;
 ; Device Name           ; 5CEFA4F23C7                                         ;
@@ -97,25 +98,20 @@ refer to the applicable agreement for further details.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
+; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 1.26        ;
-; Maximum used               ; 16          ;
+; Average used               ; 1.16        ;
+; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   2.3%      ;
-;     Processor 3            ;   2.2%      ;
-;     Processor 4            ;   2.1%      ;
-;     Processor 5            ;   2.0%      ;
-;     Processor 6            ;   1.9%      ;
-;     Processor 7            ;   1.9%      ;
-;     Processor 8            ;   1.9%      ;
-;     Processor 9            ;   1.9%      ;
-;     Processor 10           ;   1.9%      ;
-;     Processor 11           ;   1.9%      ;
-;     Processor 12           ;   1.9%      ;
-;     Processors 13-16       ;   1.0%      ;
+;     Processor 2            ;   2.5%      ;
+;     Processor 3            ;   2.3%      ;
+;     Processor 4            ;   2.3%      ;
+;     Processor 5            ;   2.2%      ;
+;     Processor 6            ;   2.2%      ;
+;     Processor 7            ;   2.2%      ;
+;     Processor 8            ;   2.1%      ;
 +----------------------------+-------------+
 
 
@@ -135,9 +131,9 @@ refer to the applicable agreement for further details.
 +------------+-----------------+--------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                           ; Note ;
 +------------+-----------------+--------------------------------------+------+
-; 149.84 MHz ; 149.84 MHz      ; clock                                ;      ;
-; 299.85 MHz ; 299.85 MHz      ; FrequencyDivider1:u_FreqDiv1|div_clk ;      ;
-; 375.09 MHz ; 375.09 MHz      ; FrequencyDivider2:u_FreqDiv2|div_clk ;      ;
+; 160.38 MHz ; 160.38 MHz      ; clock                                ;      ;
+; 267.59 MHz ; 267.59 MHz      ; FrequencyDivider1:u_FreqDiv1|div_clk ;      ;
+; 377.36 MHz ; 377.36 MHz      ; FrequencyDivider2:u_FreqDiv2|div_clk ;      ;
 +------------+-----------------+--------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -153,9 +149,9 @@ HTML report is unavailable in plain text report export.
 +--------------------------------------+--------+---------------+
 ; Clock                                ; Slack  ; End Point TNS ;
 +--------------------------------------+--------+---------------+
-; clock                                ; -5.674 ; -217.965      ;
-; FrequencyDivider1:u_FreqDiv1|div_clk ; -2.335 ; -40.001       ;
-; FrequencyDivider2:u_FreqDiv2|div_clk ; -1.666 ; -27.789       ;
+; clock                                ; -5.235 ; -217.645      ;
+; FrequencyDivider1:u_FreqDiv1|div_clk ; -2.737 ; -42.423       ;
+; FrequencyDivider2:u_FreqDiv2|div_clk ; -1.650 ; -30.299       ;
 +--------------------------------------+--------+---------------+
 
 
@@ -164,9 +160,9 @@ HTML report is unavailable in plain text report export.
 +--------------------------------------+-------+---------------+
 ; Clock                                ; Slack ; End Point TNS ;
 +--------------------------------------+-------+---------------+
-; clock                                ; 0.440 ; 0.000         ;
-; FrequencyDivider2:u_FreqDiv2|div_clk ; 0.538 ; 0.000         ;
-; FrequencyDivider1:u_FreqDiv1|div_clk ; 0.605 ; 0.000         ;
+; FrequencyDivider2:u_FreqDiv2|div_clk ; 0.342 ; 0.000         ;
+; clock                                ; 0.441 ; 0.000         ;
+; FrequencyDivider1:u_FreqDiv1|div_clk ; 0.848 ; 0.000         ;
 +--------------------------------------+-------+---------------+
 
 
@@ -187,9 +183,9 @@ No paths to report.
 +--------------------------------------+--------+---------------+
 ; Clock                                ; Slack  ; End Point TNS ;
 +--------------------------------------+--------+---------------+
-; clock                                ; -0.538 ; -51.131       ;
-; FrequencyDivider1:u_FreqDiv1|div_clk ; -0.538 ; -17.537       ;
-; FrequencyDivider2:u_FreqDiv2|div_clk ; -0.538 ; -16.212       ;
+; clock                                ; -0.538 ; -51.277       ;
+; FrequencyDivider1:u_FreqDiv1|div_clk ; -0.538 ; -21.540       ;
+; FrequencyDivider2:u_FreqDiv2|div_clk ; -0.538 ; -17.467       ;
 +--------------------------------------+--------+---------------+
 
 
@@ -204,9 +200,9 @@ No synchronizer chains to report.
 +------------+-----------------+--------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                           ; Note ;
 +------------+-----------------+--------------------------------------+------+
-; 145.6 MHz  ; 145.6 MHz       ; clock                                ;      ;
-; 290.95 MHz ; 290.95 MHz      ; FrequencyDivider1:u_FreqDiv1|div_clk ;      ;
-; 373.97 MHz ; 373.97 MHz      ; FrequencyDivider2:u_FreqDiv2|div_clk ;      ;
+; 156.32 MHz ; 156.32 MHz      ; clock                                ;      ;
+; 264.2 MHz  ; 264.2 MHz       ; FrequencyDivider1:u_FreqDiv1|div_clk ;      ;
+; 375.09 MHz ; 375.09 MHz      ; FrequencyDivider2:u_FreqDiv2|div_clk ;      ;
 +------------+-----------------+--------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -216,9 +212,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------------+--------+---------------+
 ; Clock                                ; Slack  ; End Point TNS ;
 +--------------------------------------+--------+---------------+
-; clock                                ; -5.868 ; -216.125      ;
-; FrequencyDivider1:u_FreqDiv1|div_clk ; -2.437 ; -39.042       ;
-; FrequencyDivider2:u_FreqDiv2|div_clk ; -1.674 ; -27.483       ;
+; clock                                ; -5.397 ; -216.755      ;
+; FrequencyDivider1:u_FreqDiv1|div_clk ; -2.785 ; -41.779       ;
+; FrequencyDivider2:u_FreqDiv2|div_clk ; -1.666 ; -30.676       ;
 +--------------------------------------+--------+---------------+
 
 
@@ -227,9 +223,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------------+-------+---------------+
 ; Clock                                ; Slack ; End Point TNS ;
 +--------------------------------------+-------+---------------+
-; clock                                ; 0.445 ; 0.000         ;
-; FrequencyDivider2:u_FreqDiv2|div_clk ; 0.496 ; 0.000         ;
-; FrequencyDivider1:u_FreqDiv1|div_clk ; 0.584 ; 0.000         ;
+; clock                                ; 0.235 ; 0.000         ;
+; FrequencyDivider2:u_FreqDiv2|div_clk ; 0.386 ; 0.000         ;
+; FrequencyDivider1:u_FreqDiv1|div_clk ; 0.784 ; 0.000         ;
 +--------------------------------------+-------+---------------+
 
 
@@ -250,9 +246,9 @@ No paths to report.
 +--------------------------------------+--------+---------------+
 ; Clock                                ; Slack  ; End Point TNS ;
 +--------------------------------------+--------+---------------+
-; clock                                ; -0.538 ; -52.584       ;
-; FrequencyDivider1:u_FreqDiv1|div_clk ; -0.538 ; -17.418       ;
-; FrequencyDivider2:u_FreqDiv2|div_clk ; -0.538 ; -16.244       ;
+; clock                                ; -0.538 ; -52.722       ;
+; FrequencyDivider1:u_FreqDiv1|div_clk ; -0.538 ; -21.312       ;
+; FrequencyDivider2:u_FreqDiv2|div_clk ; -0.538 ; -17.240       ;
 +--------------------------------------+--------+---------------+
 
 
@@ -267,9 +263,9 @@ No synchronizer chains to report.
 +--------------------------------------+--------+---------------+
 ; Clock                                ; Slack  ; End Point TNS ;
 +--------------------------------------+--------+---------------+
-; clock                                ; -3.105 ; -78.203       ;
-; FrequencyDivider1:u_FreqDiv1|div_clk ; -0.748 ; -12.266       ;
-; FrequencyDivider2:u_FreqDiv2|div_clk ; -0.652 ; -9.676        ;
+; clock                                ; -2.833 ; -80.920       ;
+; FrequencyDivider1:u_FreqDiv1|div_clk ; -1.035 ; -15.556       ;
+; FrequencyDivider2:u_FreqDiv2|div_clk ; -0.611 ; -9.973        ;
 +--------------------------------------+--------+---------------+
 
 
@@ -278,9 +274,9 @@ No synchronizer chains to report.
 +--------------------------------------+--------+---------------+
 ; Clock                                ; Slack  ; End Point TNS ;
 +--------------------------------------+--------+---------------+
-; FrequencyDivider2:u_FreqDiv2|div_clk ; -0.002 ; -0.003        ;
-; clock                                ; 0.198  ; 0.000         ;
-; FrequencyDivider1:u_FreqDiv1|div_clk ; 0.263  ; 0.000         ;
+; FrequencyDivider2:u_FreqDiv2|div_clk ; -0.135 ; -1.013        ;
+; clock                                ; 0.199  ; 0.000         ;
+; FrequencyDivider1:u_FreqDiv1|div_clk ; 0.340  ; 0.000         ;
 +--------------------------------------+--------+---------------+
 
 
@@ -301,9 +297,9 @@ No paths to report.
 +--------------------------------------+--------+---------------+
 ; Clock                                ; Slack  ; End Point TNS ;
 +--------------------------------------+--------+---------------+
-; clock                                ; -0.442 ; -7.100        ;
-; FrequencyDivider1:u_FreqDiv1|div_clk ; 0.070  ; 0.000         ;
-; FrequencyDivider2:u_FreqDiv2|div_clk ; 0.115  ; 0.000         ;
+; clock                                ; -0.524 ; -7.335        ;
+; FrequencyDivider1:u_FreqDiv1|div_clk ; -0.072 ; -0.773        ;
+; FrequencyDivider2:u_FreqDiv2|div_clk ; 0.119  ; 0.000         ;
 +--------------------------------------+--------+---------------+
 
 
@@ -318,9 +314,9 @@ No synchronizer chains to report.
 +--------------------------------------+--------+---------------+
 ; Clock                                ; Slack  ; End Point TNS ;
 +--------------------------------------+--------+---------------+
-; clock                                ; -2.815 ; -67.946       ;
-; FrequencyDivider1:u_FreqDiv1|div_clk ; -0.682 ; -10.071       ;
-; FrequencyDivider2:u_FreqDiv2|div_clk ; -0.549 ; -7.759        ;
+; clock                                ; -2.559 ; -70.169       ;
+; FrequencyDivider1:u_FreqDiv1|div_clk ; -0.926 ; -12.854       ;
+; FrequencyDivider2:u_FreqDiv2|div_clk ; -0.515 ; -8.088        ;
 +--------------------------------------+--------+---------------+
 
 
@@ -329,9 +325,9 @@ No synchronizer chains to report.
 +--------------------------------------+--------+---------------+
 ; Clock                                ; Slack  ; End Point TNS ;
 +--------------------------------------+--------+---------------+
-; FrequencyDivider2:u_FreqDiv2|div_clk ; -0.040 ; -0.240        ;
-; clock                                ; 0.188  ; 0.000         ;
-; FrequencyDivider1:u_FreqDiv1|div_clk ; 0.237  ; 0.000         ;
+; FrequencyDivider2:u_FreqDiv2|div_clk ; -0.152 ; -1.137        ;
+; clock                                ; 0.121  ; 0.000         ;
+; FrequencyDivider1:u_FreqDiv1|div_clk ; 0.308  ; 0.000         ;
 +--------------------------------------+--------+---------------+
 
 
@@ -352,9 +348,9 @@ No paths to report.
 +--------------------------------------+--------+---------------+
 ; Clock                                ; Slack  ; End Point TNS ;
 +--------------------------------------+--------+---------------+
-; clock                                ; -0.443 ; -7.157        ;
-; FrequencyDivider1:u_FreqDiv1|div_clk ; 0.087  ; 0.000         ;
-; FrequencyDivider2:u_FreqDiv2|div_clk ; 0.124  ; 0.000         ;
+; clock                                ; -0.496 ; -7.309        ;
+; FrequencyDivider1:u_FreqDiv1|div_clk ; -0.021 ; -0.185        ;
+; FrequencyDivider2:u_FreqDiv2|div_clk ; 0.130  ; 0.000         ;
 +--------------------------------------+--------+---------------+
 
 
@@ -369,14 +365,14 @@ No synchronizer chains to report.
 +---------------------------------------+----------+--------+----------+---------+---------------------+
 ; Clock                                 ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
 +---------------------------------------+----------+--------+----------+---------+---------------------+
-; Worst-case Slack                      ; -5.868   ; -0.040 ; N/A      ; N/A     ; -0.538              ;
-;  FrequencyDivider1:u_FreqDiv1|div_clk ; -2.437   ; 0.237  ; N/A      ; N/A     ; -0.538              ;
-;  FrequencyDivider2:u_FreqDiv2|div_clk ; -1.674   ; -0.040 ; N/A      ; N/A     ; -0.538              ;
-;  clock                                ; -5.868   ; 0.188  ; N/A      ; N/A     ; -0.538              ;
-; Design-wide TNS                       ; -285.755 ; -0.24  ; 0.0      ; 0.0     ; -86.246             ;
-;  FrequencyDivider1:u_FreqDiv1|div_clk ; -40.001  ; 0.000  ; N/A      ; N/A     ; -17.537             ;
-;  FrequencyDivider2:u_FreqDiv2|div_clk ; -27.789  ; -0.240 ; N/A      ; N/A     ; -16.244             ;
-;  clock                                ; -217.965 ; 0.000  ; N/A      ; N/A     ; -52.584             ;
+; Worst-case Slack                      ; -5.397   ; -0.152 ; N/A      ; N/A     ; -0.538              ;
+;  FrequencyDivider1:u_FreqDiv1|div_clk ; -2.785   ; 0.308  ; N/A      ; N/A     ; -0.538              ;
+;  FrequencyDivider2:u_FreqDiv2|div_clk ; -1.666   ; -0.152 ; N/A      ; N/A     ; -0.538              ;
+;  clock                                ; -5.397   ; 0.121  ; N/A      ; N/A     ; -0.538              ;
+; Design-wide TNS                       ; -290.367 ; -1.137 ; 0.0      ; 0.0     ; -91.274             ;
+;  FrequencyDivider1:u_FreqDiv1|div_clk ; -42.423  ; 0.000  ; N/A      ; N/A     ; -21.540             ;
+;  FrequencyDivider2:u_FreqDiv2|div_clk ; -30.676  ; -1.137 ; N/A      ; N/A     ; -17.467             ;
+;  clock                                ; -217.645 ; 0.000  ; N/A      ; N/A     ; -52.722             ;
 +---------------------------------------+----------+--------+----------+---------+---------------------+
 
 
@@ -553,9 +549,9 @@ No synchronizer chains to report.
 ; clock                                ; clock                                ; 3168     ; 0        ; 0        ; 0        ;
 ; FrequencyDivider1:u_FreqDiv1|div_clk ; clock                                ; 1        ; 1        ; 0        ; 0        ;
 ; FrequencyDivider2:u_FreqDiv2|div_clk ; clock                                ; 1        ; 1        ; 0        ; 0        ;
-; FrequencyDivider1:u_FreqDiv1|div_clk ; FrequencyDivider1:u_FreqDiv1|div_clk ; 131      ; 0        ; 0        ; 0        ;
+; FrequencyDivider1:u_FreqDiv1|div_clk ; FrequencyDivider1:u_FreqDiv1|div_clk ; 117      ; 0        ; 0        ; 0        ;
 ; FrequencyDivider1:u_FreqDiv1|div_clk ; FrequencyDivider2:u_FreqDiv2|div_clk ; 16       ; 0        ; 0        ; 0        ;
-; FrequencyDivider2:u_FreqDiv2|div_clk ; FrequencyDivider2:u_FreqDiv2|div_clk ; 57       ; 0        ; 0        ; 0        ;
+; FrequencyDivider2:u_FreqDiv2|div_clk ; FrequencyDivider2:u_FreqDiv2|div_clk ; 60       ; 0        ; 0        ; 0        ;
 +--------------------------------------+--------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -568,9 +564,9 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; clock                                ; clock                                ; 3168     ; 0        ; 0        ; 0        ;
 ; FrequencyDivider1:u_FreqDiv1|div_clk ; clock                                ; 1        ; 1        ; 0        ; 0        ;
 ; FrequencyDivider2:u_FreqDiv2|div_clk ; clock                                ; 1        ; 1        ; 0        ; 0        ;
-; FrequencyDivider1:u_FreqDiv1|div_clk ; FrequencyDivider1:u_FreqDiv1|div_clk ; 131      ; 0        ; 0        ; 0        ;
+; FrequencyDivider1:u_FreqDiv1|div_clk ; FrequencyDivider1:u_FreqDiv1|div_clk ; 117      ; 0        ; 0        ; 0        ;
 ; FrequencyDivider1:u_FreqDiv1|div_clk ; FrequencyDivider2:u_FreqDiv2|div_clk ; 16       ; 0        ; 0        ; 0        ;
-; FrequencyDivider2:u_FreqDiv2|div_clk ; FrequencyDivider2:u_FreqDiv2|div_clk ; 57       ; 0        ; 0        ; 0        ;
+; FrequencyDivider2:u_FreqDiv2|div_clk ; FrequencyDivider2:u_FreqDiv2|div_clk ; 60       ; 0        ; 0        ; 0        ;
 +--------------------------------------+--------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -595,7 +591,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 1     ; 1    ;
-; Unconstrained Input Port Paths  ; 109   ; 109  ;
+; Unconstrained Input Port Paths  ; 112   ; 112  ;
 ; Unconstrained Output Ports      ; 23    ; 23   ;
 ; Unconstrained Output Port Paths ; 44    ; 44   ;
 +---------------------------------+-------+------+
@@ -692,133 +688,133 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 
 
-+--------------------------+
-; Timing Analyzer Messages ;
-+--------------------------+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Timing Analyzer
-    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Nov 22 14:38:42 2022
+Info: Running Quartus Prime TimeQuest Timing Analyzer
+    Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+    Info: Processing started: Tue Nov 22 15:45:57 2022
 Info: Command: quartus_sta Lab10_Traffic_Light -c Lab10_Traffic_Light
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Critical Warning (332012): Synopsys Design Constraints File file not found: 'Lab10_Traffic_Light.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Lab10_Traffic_Light.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
-    Info (332105): create_clock -period 1.000 -name FrequencyDivider1:u_FreqDiv1|div_clk FrequencyDivider1:u_FreqDiv1|div_clk
     Info (332105): create_clock -period 1.000 -name clock clock
     Info (332105): create_clock -period 1.000 -name FrequencyDivider2:u_FreqDiv2|div_clk FrequencyDivider2:u_FreqDiv2|div_clk
+    Info (332105): create_clock -period 1.000 -name FrequencyDivider1:u_FreqDiv1|div_clk FrequencyDivider1:u_FreqDiv1|div_clk
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
-Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
-    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -5.674
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -5.235
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.674            -217.965 clock 
-    Info (332119):    -2.335             -40.001 FrequencyDivider1:u_FreqDiv1|div_clk 
-    Info (332119):    -1.666             -27.789 FrequencyDivider2:u_FreqDiv2|div_clk 
-Info (332146): Worst-case hold slack is 0.440
+    Info (332119):    -5.235            -217.645 clock 
+    Info (332119):    -2.737             -42.423 FrequencyDivider1:u_FreqDiv1|div_clk 
+    Info (332119):    -1.650             -30.299 FrequencyDivider2:u_FreqDiv2|div_clk 
+Info (332146): Worst-case hold slack is 0.342
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.440               0.000 clock 
-    Info (332119):     0.538               0.000 FrequencyDivider2:u_FreqDiv2|div_clk 
-    Info (332119):     0.605               0.000 FrequencyDivider1:u_FreqDiv1|div_clk 
+    Info (332119):     0.342               0.000 FrequencyDivider2:u_FreqDiv2|div_clk 
+    Info (332119):     0.441               0.000 clock 
+    Info (332119):     0.848               0.000 FrequencyDivider1:u_FreqDiv1|div_clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -0.538
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.538             -51.131 clock 
-    Info (332119):    -0.538             -17.537 FrequencyDivider1:u_FreqDiv1|div_clk 
-    Info (332119):    -0.538             -16.212 FrequencyDivider2:u_FreqDiv2|div_clk 
+    Info (332119):    -0.538             -51.277 clock 
+    Info (332119):    -0.538             -21.540 FrequencyDivider1:u_FreqDiv1|div_clk 
+    Info (332119):    -0.538             -17.467 FrequencyDivider2:u_FreqDiv2|div_clk 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -5.868
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -5.397
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.868            -216.125 clock 
-    Info (332119):    -2.437             -39.042 FrequencyDivider1:u_FreqDiv1|div_clk 
-    Info (332119):    -1.674             -27.483 FrequencyDivider2:u_FreqDiv2|div_clk 
-Info (332146): Worst-case hold slack is 0.445
+    Info (332119):    -5.397            -216.755 clock 
+    Info (332119):    -2.785             -41.779 FrequencyDivider1:u_FreqDiv1|div_clk 
+    Info (332119):    -1.666             -30.676 FrequencyDivider2:u_FreqDiv2|div_clk 
+Info (332146): Worst-case hold slack is 0.235
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.445               0.000 clock 
-    Info (332119):     0.496               0.000 FrequencyDivider2:u_FreqDiv2|div_clk 
-    Info (332119):     0.584               0.000 FrequencyDivider1:u_FreqDiv1|div_clk 
+    Info (332119):     0.235               0.000 clock 
+    Info (332119):     0.386               0.000 FrequencyDivider2:u_FreqDiv2|div_clk 
+    Info (332119):     0.784               0.000 FrequencyDivider1:u_FreqDiv1|div_clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -0.538
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.538             -52.584 clock 
-    Info (332119):    -0.538             -17.418 FrequencyDivider1:u_FreqDiv1|div_clk 
-    Info (332119):    -0.538             -16.244 FrequencyDivider2:u_FreqDiv2|div_clk 
+    Info (332119):    -0.538             -52.722 clock 
+    Info (332119):    -0.538             -21.312 FrequencyDivider1:u_FreqDiv1|div_clk 
+    Info (332119):    -0.538             -17.240 FrequencyDivider2:u_FreqDiv2|div_clk 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.105
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -2.833
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.105             -78.203 clock 
-    Info (332119):    -0.748             -12.266 FrequencyDivider1:u_FreqDiv1|div_clk 
-    Info (332119):    -0.652              -9.676 FrequencyDivider2:u_FreqDiv2|div_clk 
-Info (332146): Worst-case hold slack is -0.002
+    Info (332119):    -2.833             -80.920 clock 
+    Info (332119):    -1.035             -15.556 FrequencyDivider1:u_FreqDiv1|div_clk 
+    Info (332119):    -0.611              -9.973 FrequencyDivider2:u_FreqDiv2|div_clk 
+Info (332146): Worst-case hold slack is -0.135
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.002              -0.003 FrequencyDivider2:u_FreqDiv2|div_clk 
-    Info (332119):     0.198               0.000 clock 
-    Info (332119):     0.263               0.000 FrequencyDivider1:u_FreqDiv1|div_clk 
+    Info (332119):    -0.135              -1.013 FrequencyDivider2:u_FreqDiv2|div_clk 
+    Info (332119):     0.199               0.000 clock 
+    Info (332119):     0.340               0.000 FrequencyDivider1:u_FreqDiv1|div_clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.442
+Info (332146): Worst-case minimum pulse width slack is -0.524
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.442              -7.100 clock 
-    Info (332119):     0.070               0.000 FrequencyDivider1:u_FreqDiv1|div_clk 
-    Info (332119):     0.115               0.000 FrequencyDivider2:u_FreqDiv2|div_clk 
+    Info (332119):    -0.524              -7.335 clock 
+    Info (332119):    -0.072              -0.773 FrequencyDivider1:u_FreqDiv1|div_clk 
+    Info (332119):     0.119               0.000 FrequencyDivider2:u_FreqDiv2|div_clk 
 Info: Analyzing Fast 1100mV 0C Model
-Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.815
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -2.559
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.815             -67.946 clock 
-    Info (332119):    -0.682             -10.071 FrequencyDivider1:u_FreqDiv1|div_clk 
-    Info (332119):    -0.549              -7.759 FrequencyDivider2:u_FreqDiv2|div_clk 
-Info (332146): Worst-case hold slack is -0.040
+    Info (332119):    -2.559             -70.169 clock 
+    Info (332119):    -0.926             -12.854 FrequencyDivider1:u_FreqDiv1|div_clk 
+    Info (332119):    -0.515              -8.088 FrequencyDivider2:u_FreqDiv2|div_clk 
+Info (332146): Worst-case hold slack is -0.152
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.040              -0.240 FrequencyDivider2:u_FreqDiv2|div_clk 
-    Info (332119):     0.188               0.000 clock 
-    Info (332119):     0.237               0.000 FrequencyDivider1:u_FreqDiv1|div_clk 
+    Info (332119):    -0.152              -1.137 FrequencyDivider2:u_FreqDiv2|div_clk 
+    Info (332119):     0.121               0.000 clock 
+    Info (332119):     0.308               0.000 FrequencyDivider1:u_FreqDiv1|div_clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.443
+Info (332146): Worst-case minimum pulse width slack is -0.496
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.443              -7.157 clock 
-    Info (332119):     0.087               0.000 FrequencyDivider1:u_FreqDiv1|div_clk 
-    Info (332119):     0.124               0.000 FrequencyDivider2:u_FreqDiv2|div_clk 
+    Info (332119):    -0.496              -7.309 clock 
+    Info (332119):    -0.021              -0.185 FrequencyDivider1:u_FreqDiv1|div_clk 
+    Info (332119):     0.130               0.000 FrequencyDivider2:u_FreqDiv2|div_clk 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5244 megabytes
-    Info: Processing ended: Tue Nov 22 14:38:47 2022
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:05
+Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 5141 megabytes
+    Info: Processing ended: Tue Nov 22 15:46:01 2022
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
 
 
