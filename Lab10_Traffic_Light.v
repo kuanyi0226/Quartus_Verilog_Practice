@@ -9,7 +9,7 @@ wire div_clock1; //for seven-display
 wire div_clock2; //for dot matrix
 wire [7:0] dot_row;
 wire [7:0] dot_col;
-wire [2:0] gyr; //current light color
+wire [1:0] gyr; //current light color
 wire [3:0] count;
 wire [6:0] out;
 

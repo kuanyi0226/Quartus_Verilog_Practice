@@ -1,6 +1,6 @@
 module DotMatrixController(div_clk, rst, gyr, dot_row, dot_col);
 input div_clk, rst; 
-input [2:0] gyr;
+input [1:0] gyr;
 output [7:0] dot_row;
 output [7:0] dot_col;
 
@@ -91,12 +91,6 @@ begin
 						endcase
 					end
 		endcase
-	
-	
-	
-	
-	
-	
 		
 		
 	end

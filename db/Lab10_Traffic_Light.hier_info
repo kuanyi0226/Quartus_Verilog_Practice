@@ -1,29 +1,29 @@
 |Lab10_Traffic_Light
 clock => clock.IN2
 reset => reset.IN4
-dot_row[0] << DotMatrixController:u_dotMatirx.dot_row
-dot_row[1] << DotMatrixController:u_dotMatirx.dot_row
-dot_row[2] << DotMatrixController:u_dotMatirx.dot_row
-dot_row[3] << DotMatrixController:u_dotMatirx.dot_row
-dot_row[4] << DotMatrixController:u_dotMatirx.dot_row
-dot_row[5] << DotMatrixController:u_dotMatirx.dot_row
-dot_row[6] << DotMatrixController:u_dotMatirx.dot_row
-dot_row[7] << DotMatrixController:u_dotMatirx.dot_row
-dot_col[0] << DotMatrixController:u_dotMatirx.dot_col
-dot_col[1] << DotMatrixController:u_dotMatirx.dot_col
-dot_col[2] << DotMatrixController:u_dotMatirx.dot_col
-dot_col[3] << DotMatrixController:u_dotMatirx.dot_col
-dot_col[4] << DotMatrixController:u_dotMatirx.dot_col
-dot_col[5] << DotMatrixController:u_dotMatirx.dot_col
-dot_col[6] << DotMatrixController:u_dotMatirx.dot_col
-dot_col[7] << DotMatrixController:u_dotMatirx.dot_col
-out[0] << SevenDisplay:u_sevenDisplay.out
-out[1] << SevenDisplay:u_sevenDisplay.out
-out[2] << SevenDisplay:u_sevenDisplay.out
-out[3] << SevenDisplay:u_sevenDisplay.out
-out[4] << SevenDisplay:u_sevenDisplay.out
-out[5] << SevenDisplay:u_sevenDisplay.out
-out[6] << SevenDisplay:u_sevenDisplay.out
+dot_row[0] <= DotMatrixController:u_dotMatirx.dot_row
+dot_row[1] <= DotMatrixController:u_dotMatirx.dot_row
+dot_row[2] <= DotMatrixController:u_dotMatirx.dot_row
+dot_row[3] <= DotMatrixController:u_dotMatirx.dot_row
+dot_row[4] <= DotMatrixController:u_dotMatirx.dot_row
+dot_row[5] <= DotMatrixController:u_dotMatirx.dot_row
+dot_row[6] <= DotMatrixController:u_dotMatirx.dot_row
+dot_row[7] <= DotMatrixController:u_dotMatirx.dot_row
+dot_col[0] <= DotMatrixController:u_dotMatirx.dot_col
+dot_col[1] <= DotMatrixController:u_dotMatirx.dot_col
+dot_col[2] <= DotMatrixController:u_dotMatirx.dot_col
+dot_col[3] <= DotMatrixController:u_dotMatirx.dot_col
+dot_col[4] <= DotMatrixController:u_dotMatirx.dot_col
+dot_col[5] <= DotMatrixController:u_dotMatirx.dot_col
+dot_col[6] <= DotMatrixController:u_dotMatirx.dot_col
+dot_col[7] <= DotMatrixController:u_dotMatirx.dot_col
+out[0] <= SevenDisplay:u_sevenDisplay.out
+out[1] <= SevenDisplay:u_sevenDisplay.out
+out[2] <= SevenDisplay:u_sevenDisplay.out
+out[3] <= SevenDisplay:u_sevenDisplay.out
+out[4] <= SevenDisplay:u_sevenDisplay.out
+out[5] <= SevenDisplay:u_sevenDisplay.out
+out[6] <= SevenDisplay:u_sevenDisplay.out
 
 
 |Lab10_Traffic_Light|FrequencyDivider1:u_FreqDiv1
@@ -173,7 +173,6 @@ clk => count[2]~reg0.CLK
 clk => count[3]~reg0.CLK
 clk => gyr[0]~reg0.CLK
 clk => gyr[1]~reg0.CLK
-clk => gyr[2]~reg0.CLK
 clk => r_count[0].CLK
 clk => r_count[1].CLK
 clk => r_count[2].CLK
@@ -188,7 +187,6 @@ clk => g_count[2].CLK
 clk => g_count[3].CLK
 reset => gyr[0]~reg0.ACLR
 reset => gyr[1]~reg0.ACLR
-reset => gyr[2]~reg0.ACLR
 reset => r_count[0].ACLR
 reset => r_count[1].PRESET
 reset => r_count[2].ACLR
@@ -211,7 +209,6 @@ count[2] <= count[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 count[3] <= count[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 gyr[0] <= gyr[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 gyr[1] <= gyr[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-gyr[2] <= gyr[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Lab10_Traffic_Light|SevenDisplay:u_sevenDisplay
@@ -271,8 +268,6 @@ gyr[0] => Equal0.IN5
 gyr[0] => Equal1.IN5
 gyr[1] => Equal0.IN4
 gyr[1] => Equal1.IN4
-gyr[2] => Equal0.IN3
-gyr[2] => Equal1.IN3
 dot_row[0] <= dot_row[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 dot_row[1] <= dot_row[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 dot_row[2] <= dot_row[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE

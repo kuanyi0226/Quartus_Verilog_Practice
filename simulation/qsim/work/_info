@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dC:/Verilog/Lab10/simulation/qsim
 vLab10_Traffic_Light
-Z1 !s110 1669036475
+Z1 !s110 1669099173
 !i10b 1
-!s100 @FZL[1=ze?ojAQ;K`NS;Y3
-IlSM;@D8BC?WC;Q7PUjD^43
+!s100 h:JEHQj26d34jSD9Yd5SH3
+IU<[EP_o7FMIm<Cl9kDBDh2
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1669036474
+w1669099171
 8Lab10_Traffic_Light.vo
 FLab10_Traffic_Light.vo
 L0 31
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1669036475.000000
+Z4 !s108 1669099173.000000
 !s107 Lab10_Traffic_Light.vo|
 !s90 -work|work|Lab10_Traffic_Light.vo|
 !i113 1
@@ -37,7 +37,7 @@ R1
 IG=jaI2AO3:2Lj2TLj@QnA2
 R2
 R0
-w1669036473
+w1669099170
 8Waveform.vwf.vt
 FWaveform.vwf.vt
 L0 29
