@@ -1,0 +1,3 @@
+module Lab11_KeyPad(clk, reset, keyboardRow, keyboardCol);
+input clk, reset;
+output [3:0] keyboardRow, [3:0] keyboardCol;
