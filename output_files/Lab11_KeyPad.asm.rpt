@@ -1,6 +1,6 @@
 Assembler report for Lab11_KeyPad
-Mon Dec 05 22:10:35 2022
-Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Tue Dec 06 15:49:36 2022
+Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
 ---------------------
@@ -10,7 +10,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Verilog/Lab11/output_files/Lab11_KeyPad.sof
+  5. Assembler Device Options: C:/Users/user/Downloads/Lab11/output_files/Lab11_KeyPad.sof
   6. Assembler Messages
 
 
@@ -18,7 +18,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2018  Intel Corporation. All rights reserved.
+Copyright (C) 2016  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -26,18 +26,19 @@ functions, and any output files from any of the foregoing
 associated documentation or information are expressly subject 
 to the terms and conditions of the Intel Program License 
 Subscription Agreement, the Intel Quartus Prime License Agreement,
-the Intel FPGA IP License Agreement, or other applicable license
-agreement, including, without limitation, that your use is for
-the sole purpose of programming logic devices manufactured by
-Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details.
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
 
 
 
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Dec 05 22:10:35 2022 ;
+; Assembler Status      ; Successful - Tue Dec 06 15:49:36 2022 ;
 ; Revision Name         ; Lab11_KeyPad                          ;
 ; Top-level Entity Name ; Lab11_KeyPad                          ;
 ; Family                ; Cyclone V                             ;
@@ -52,23 +53,24 @@ refer to the applicable agreement for further details.
 +--------+---------+---------------+
 
 
-+------------------------------------------------+
-; Assembler Generated Files                      ;
-+------------------------------------------------+
-; File Name                                      ;
-+------------------------------------------------+
-; C:/Verilog/Lab11/output_files/Lab11_KeyPad.sof ;
-+------------------------------------------------+
++-------------------------------------------------------------+
+; Assembler Generated Files                                   ;
++-------------------------------------------------------------+
+; File Name                                                   ;
++-------------------------------------------------------------+
+; C:/Users/user/Downloads/Lab11/output_files/Lab11_KeyPad.sof ;
++-------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------+
-; Assembler Device Options: C:/Verilog/Lab11/output_files/Lab11_KeyPad.sof ;
-+----------------+---------------------------------------------------------+
-; Option         ; Setting                                                 ;
-+----------------+---------------------------------------------------------+
-; JTAG usercode  ; 0x004FF5DF                                              ;
-; Checksum       ; 0x004FF5DF                                              ;
-+----------------+---------------------------------------------------------+
++---------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/user/Downloads/Lab11/output_files/Lab11_KeyPad.sof ;
++----------------+----------------------------------------------------------------------+
+; Option         ; Setting                                                              ;
++----------------+----------------------------------------------------------------------+
+; Device         ; 5CEFA4F23C7                                                          ;
+; JTAG usercode  ; 0x004FEA4C                                                           ;
+; Checksum       ; 0x004FEA4C                                                           ;
++----------------+----------------------------------------------------------------------+
 
 
 +--------------------+
@@ -76,15 +78,15 @@ refer to the applicable agreement for further details.
 +--------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
-    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Dec 05 22:10:31 2022
+    Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+    Info: Processing started: Tue Dec 06 15:49:34 2022
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Lab11_KeyPad -c Lab11_KeyPad
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4804 megabytes
-    Info: Processing ended: Mon Dec 05 22:10:35 2022
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Peak virtual memory: 4813 megabytes
+    Info: Processing ended: Tue Dec 06 15:49:36 2022
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

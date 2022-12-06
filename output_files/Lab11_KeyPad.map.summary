@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Mon Dec 05 22:09:56 2022
-Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Analysis & Synthesis Status : Successful - Tue Dec 06 15:49:16 2022
+Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 Revision Name : Lab11_KeyPad
 Top-level Entity Name : Lab11_KeyPad
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 109
+Total registers : 108
 Total pins : 26
 Total virtual pins : 0
 Total block memory bits : 0

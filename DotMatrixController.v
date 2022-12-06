@@ -34,7 +34,7 @@ begin
 	
 end
 
-always @ (posedge div_clk1 or negedge rst)
+always @ (posedge div_clk2 or negedge rst)
 begin
 	if(!rst)
 	begin
@@ -51,175 +51,175 @@ begin
 	begin
 		case(keypadBuf)
 			4'h0:begin
-				dot_col_buf[0] <= 8'b00000000 | dot_col_buf[0];
-				dot_col_buf[1] <= 8'b00000000 | dot_col_buf[1];
-				dot_col_buf[2] <= 8'b00000000 | dot_col_buf[2];
-				dot_col_buf[3] <= 8'b00000000 | dot_col_buf[3];
-				dot_col_buf[4] <= 8'b00000000 | dot_col_buf[4];
-				dot_col_buf[5] <= 8'b00000000 | dot_col_buf[5];
-				dot_col_buf[6] <= 8'b11000000 | dot_col_buf[6];
-				dot_col_buf[7] <= 8'b11000000 | dot_col_buf[7];
+				dot_col_buf[0] <= 8'b00000000 ;
+				dot_col_buf[1] <= 8'b00000000 ;
+				dot_col_buf[2] <= 8'b00000000 ;
+				dot_col_buf[3] <= 8'b00000000 ;
+				dot_col_buf[4] <= 8'b00000000 ;
+				dot_col_buf[5] <= 8'b00000000 ;
+				dot_col_buf[6] <= 8'b11000000 ;
+				dot_col_buf[7] <= 8'b11000000 ;
 			end
 			5'h1: begin
-				dot_col_buf[0] <= 8'b00000000 | dot_col_buf[0];
-				dot_col_buf[1] <= 8'b00000000	| dot_col_buf[1];
-				dot_col_buf[2] <= 8'b00000000	| dot_col_buf[2];
-				dot_col_buf[3] <= 8'b00000000	| dot_col_buf[3];
-				dot_col_buf[4] <= 8'b00000000	| dot_col_buf[4];
-				dot_col_buf[5] <= 8'b00000000	| dot_col_buf[5];
-				dot_col_buf[6] <= 8'b00110000	| dot_col_buf[6];
-				dot_col_buf[7] <= 8'b00110000	| dot_col_buf[7];
+				dot_col_buf[0] <= 8'b00000000 ;
+				dot_col_buf[1] <= 8'b00000000	;
+				dot_col_buf[2] <= 8'b00000000	;
+				dot_col_buf[3] <= 8'b00000000	;
+				dot_col_buf[4] <= 8'b00000000	;
+				dot_col_buf[5] <= 8'b00000000	;
+				dot_col_buf[6] <= 8'b00110000	;
+				dot_col_buf[7] <= 8'b00110000	;
 			end
 			5'h2: begin
-				dot_col_buf[0] <= 8'b00000000 | dot_col_buf[0];
-				dot_col_buf[1] <= 8'b00000000 | dot_col_buf[1];
-				dot_col_buf[2] <= 8'b00000000 | dot_col_buf[2];
-				dot_col_buf[3] <= 8'b00000000 | dot_col_buf[3];
-				dot_col_buf[4] <= 8'b00110000 | dot_col_buf[4];
-				dot_col_buf[5] <= 8'b00110000 | dot_col_buf[5];
-				dot_col_buf[6] <= 8'b00000000 | dot_col_buf[6];
-				dot_col_buf[7] <= 8'b00000000 | dot_col_buf[7];
+				dot_col_buf[0] <= 8'b00000000 ;
+				dot_col_buf[1] <= 8'b00000000 ;
+				dot_col_buf[2] <= 8'b00000000 ;
+				dot_col_buf[3] <= 8'b00000000 ;
+				dot_col_buf[4] <= 8'b00110000 ;
+				dot_col_buf[5] <= 8'b00110000 ;
+				dot_col_buf[6] <= 8'b00000000 ;
+				dot_col_buf[7] <= 8'b00000000 ;
 			end
 			5'h3: begin
-				dot_col_buf[0] <= 8'b00000000 | dot_col_buf[0];
-				dot_col_buf[1] <= 8'b00000000 | dot_col_buf[1];
-				dot_col_buf[2] <= 8'b00110000 | dot_col_buf[2];
-				dot_col_buf[3] <= 8'b00110000 | dot_col_buf[3];
-				dot_col_buf[4] <= 8'b00000000 | dot_col_buf[4];
-				dot_col_buf[5] <= 8'b00000000 | dot_col_buf[5];
-				dot_col_buf[6] <= 8'b00000000 | dot_col_buf[6];
-				dot_col_buf[7] <= 8'b00000000 | dot_col_buf[7];
+				dot_col_buf[0] <= 8'b00000000 ;
+				dot_col_buf[1] <= 8'b00000000 ;
+				dot_col_buf[2] <= 8'b00110000 ;
+				dot_col_buf[3] <= 8'b00110000 ;
+				dot_col_buf[4] <= 8'b00000000 ;
+				dot_col_buf[5] <= 8'b00000000 ;
+				dot_col_buf[6] <= 8'b00000000 ;
+				dot_col_buf[7] <= 8'b00000000 ;
 			end
 			5'h4: begin
-				dot_col_buf[0] <= 8'b00000000 | dot_col_buf[0];
-				dot_col_buf[1] <= 8'b00000000 | dot_col_buf[1];
-				dot_col_buf[2] <= 8'b00000000 | dot_col_buf[2];
-				dot_col_buf[3] <= 8'b00000000 | dot_col_buf[3];
-				dot_col_buf[4] <= 8'b00000000 | dot_col_buf[4];
-				dot_col_buf[5] <= 8'b00000000 | dot_col_buf[5];
-				dot_col_buf[6] <= 8'b00001100 | dot_col_buf[6];
-				dot_col_buf[7] <= 8'b00001100 | dot_col_buf[7];
+				dot_col_buf[0] <= 8'b00000000 ;
+				dot_col_buf[1] <= 8'b00000000 ;
+				dot_col_buf[2] <= 8'b00000000 ;
+				dot_col_buf[3] <= 8'b00000000 ;
+				dot_col_buf[4] <= 8'b00000000 ;
+				dot_col_buf[5] <= 8'b00000000 ;
+				dot_col_buf[6] <= 8'b00001100 ;
+				dot_col_buf[7] <= 8'b00001100 ;
 			end
 			5'h5: begin
-				dot_col_buf[0] <= 8'b00000000 | dot_col_buf[0];
-				dot_col_buf[1] <= 8'b00000000 | dot_col_buf[1];
-				dot_col_buf[2] <= 8'b00000000 | dot_col_buf[2];
-				dot_col_buf[3] <= 8'b00000000 | dot_col_buf[3];
-				dot_col_buf[4] <= 8'b00001100 | dot_col_buf[4];
-				dot_col_buf[5] <= 8'b00001100 | dot_col_buf[5];
-				dot_col_buf[6] <= 8'b00000000 | dot_col_buf[6];
-				dot_col_buf[7] <= 8'b00000000 | dot_col_buf[7];
+				dot_col_buf[0] <= 8'b00000000 ;
+				dot_col_buf[1] <= 8'b00000000 ;
+				dot_col_buf[2] <= 8'b00000000 ;
+				dot_col_buf[3] <= 8'b00000000 ;
+				dot_col_buf[4] <= 8'b00001100 ;
+				dot_col_buf[5] <= 8'b00001100 ;
+				dot_col_buf[6] <= 8'b00000000 ;
+				dot_col_buf[7] <= 8'b00000000 ;
 			end
 			5'h6: begin
-				dot_col_buf[0] <= 8'b00000000 | dot_col_buf[0];
-				dot_col_buf[1] <= 8'b00000000 | dot_col_buf[1];
-				dot_col_buf[2] <= 8'b00001100 | dot_col_buf[2];
-				dot_col_buf[3] <= 8'b00001100 | dot_col_buf[3];
-				dot_col_buf[4] <= 8'b00000000 | dot_col_buf[4];
-				dot_col_buf[5] <= 8'b00000000 | dot_col_buf[5];
-				dot_col_buf[6] <= 8'b00000000 | dot_col_buf[6];
-				dot_col_buf[7] <= 8'b00000000 | dot_col_buf[7];
+				dot_col_buf[0] <= 8'b00000000 ;
+				dot_col_buf[1] <= 8'b00000000 ;
+				dot_col_buf[2] <= 8'b00001100 ;
+				dot_col_buf[3] <= 8'b00001100 ;
+				dot_col_buf[4] <= 8'b00000000 ;
+				dot_col_buf[5] <= 8'b00000000 ;
+				dot_col_buf[6] <= 8'b00000000 ;
+				dot_col_buf[7] <= 8'b00000000 ;
 			end
 			5'h7: begin
-				dot_col_buf[0] <= 8'b00000000 | dot_col_buf[0];
-				dot_col_buf[1] <= 8'b00000000 | dot_col_buf[1];
-				dot_col_buf[2] <= 8'b00000000 | dot_col_buf[2];
-				dot_col_buf[3] <= 8'b00000000 | dot_col_buf[3];
-				dot_col_buf[4] <= 8'b00000000 | dot_col_buf[4];
-				dot_col_buf[5] <= 8'b00000000 | dot_col_buf[5];
-				dot_col_buf[6] <= 8'b00000011 | dot_col_buf[6];
-				dot_col_buf[7] <= 8'b00000011 | dot_col_buf[7];
+				dot_col_buf[0] <= 8'b00000000 ;
+				dot_col_buf[1] <= 8'b00000000 ;
+				dot_col_buf[2] <= 8'b00000000 ;
+				dot_col_buf[3] <= 8'b00000000 ;
+				dot_col_buf[4] <= 8'b00000000 ;
+				dot_col_buf[5] <= 8'b00000000 ;
+				dot_col_buf[6] <= 8'b00000011 ;
+				dot_col_buf[7] <= 8'b00000011 ;
 			end
 			5'h8: begin
-				dot_col_buf[0] <= 8'b00000000 | dot_col_buf[0];
-				dot_col_buf[1] <= 8'b00000000 | dot_col_buf[1];
-				dot_col_buf[2] <= 8'b00000000 | dot_col_buf[2];
-				dot_col_buf[3] <= 8'b00000000 | dot_col_buf[3];
-				dot_col_buf[4] <= 8'b00000011 | dot_col_buf[4];
-				dot_col_buf[5] <= 8'b00000011 | dot_col_buf[5];
-				dot_col_buf[6] <= 8'b00000000 | dot_col_buf[6];
-				dot_col_buf[7] <= 8'b00000000 | dot_col_buf[7];
+				dot_col_buf[0] <= 8'b00000000 ;
+				dot_col_buf[1] <= 8'b00000000 ;
+				dot_col_buf[2] <= 8'b00000000 ;
+				dot_col_buf[3] <= 8'b00000000 ;
+				dot_col_buf[4] <= 8'b00000011 ;
+				dot_col_buf[5] <= 8'b00000011 ;
+				dot_col_buf[6] <= 8'b00000000 ;
+				dot_col_buf[7] <= 8'b00000000 ;
 			end
 			5'h9: begin
-				dot_col_buf[0] <= 8'b00000000 | dot_col_buf[0];
-				dot_col_buf[1] <= 8'b00000000 | dot_col_buf[1];
-				dot_col_buf[2] <= 8'b00000011 | dot_col_buf[2];
-				dot_col_buf[3] <= 8'b00000011 | dot_col_buf[3];
-				dot_col_buf[4] <= 8'b00000000 | dot_col_buf[4];
-				dot_col_buf[5] <= 8'b00000000 | dot_col_buf[5];
-				dot_col_buf[6] <= 8'b00000000 | dot_col_buf[6];
-				dot_col_buf[7] <= 8'b00000000 | dot_col_buf[7];
+				dot_col_buf[0] <= 8'b00000000 ;
+				dot_col_buf[1] <= 8'b00000000 ;
+				dot_col_buf[2] <= 8'b00000011 ;
+				dot_col_buf[3] <= 8'b00000011 ;
+				dot_col_buf[4] <= 8'b00000000 ;
+				dot_col_buf[5] <= 8'b00000000 ;
+				dot_col_buf[6] <= 8'b00000000 ;
+				dot_col_buf[7] <= 8'b00000000 ;
 			end
 			5'ha: begin
-				dot_col_buf[0] <= 8'b00000000| dot_col_buf[0];
-				dot_col_buf[1] <= 8'b00000000| dot_col_buf[1];
-				dot_col_buf[2] <= 8'b00000000| dot_col_buf[2];
-				dot_col_buf[3] <= 8'b00000000| dot_col_buf[3];
-				dot_col_buf[4] <= 8'b11000000| dot_col_buf[4];
-				dot_col_buf[5] <= 8'b11000000| dot_col_buf[5];
-				dot_col_buf[6] <= 8'b00000000| dot_col_buf[6];
-				dot_col_buf[7] <= 8'b00000000| dot_col_buf[7];
+				dot_col_buf[0] <= 8'b00000000;
+				dot_col_buf[1] <= 8'b00000000;
+				dot_col_buf[2] <= 8'b00000000;
+				dot_col_buf[3] <= 8'b00000000;
+				dot_col_buf[4] <= 8'b11000000;
+				dot_col_buf[5] <= 8'b11000000;
+				dot_col_buf[6] <= 8'b00000000;
+				dot_col_buf[7] <= 8'b00000000;
 			end
 			5'hb: begin
-				dot_col_buf[0] <= 8'b00000000| dot_col_buf[0];
-				dot_col_buf[1] <= 8'b00000000| dot_col_buf[1];
-				dot_col_buf[2] <= 8'b11000000| dot_col_buf[2];
-				dot_col_buf[3] <= 8'b11000000| dot_col_buf[3];
-				dot_col_buf[4] <= 8'b00000000| dot_col_buf[4];
-				dot_col_buf[5] <= 8'b00000000| dot_col_buf[5];
-				dot_col_buf[6] <= 8'b00000000| dot_col_buf[6];
-				dot_col_buf[7] <= 8'b00000000| dot_col_buf[7];
+				dot_col_buf[0] <= 8'b00000000;
+				dot_col_buf[1] <= 8'b00000000;
+				dot_col_buf[2] <= 8'b11000000;
+				dot_col_buf[3] <= 8'b11000000;
+				dot_col_buf[4] <= 8'b00000000;
+				dot_col_buf[5] <= 8'b00000000;
+				dot_col_buf[6] <= 8'b00000000;
+				dot_col_buf[7] <= 8'b00000000;
 			end
 			5'hc: begin
-				dot_col_buf[0] <= 8'b00000011| dot_col_buf[0];
-				dot_col_buf[1] <= 8'b00000011| dot_col_buf[1];
-				dot_col_buf[2] <= 8'b00000000| dot_col_buf[2];
-				dot_col_buf[3] <= 8'b00000000| dot_col_buf[3];
-				dot_col_buf[4] <= 8'b00000000| dot_col_buf[4];
-				dot_col_buf[5] <= 8'b00000000| dot_col_buf[5];
-				dot_col_buf[6] <= 8'b00000000| dot_col_buf[6];
-				dot_col_buf[7] <= 8'b00000000| dot_col_buf[7];
+				dot_col_buf[0] <= 8'b00000011;
+				dot_col_buf[1] <= 8'b00000011;
+				dot_col_buf[2] <= 8'b00000000;
+				dot_col_buf[3] <= 8'b00000000;
+				dot_col_buf[4] <= 8'b00000000;
+				dot_col_buf[5] <= 8'b00000000;
+				dot_col_buf[6] <= 8'b00000000;
+				dot_col_buf[7] <= 8'b00000000;
 			end
 			5'hd: begin
-				dot_col_buf[0] <= 8'b00001100| dot_col_buf[0];
-				dot_col_buf[1] <= 8'b00001100| dot_col_buf[1];
-				dot_col_buf[2] <= 8'b00000000| dot_col_buf[2];
-				dot_col_buf[3] <= 8'b00000000| dot_col_buf[3];
-				dot_col_buf[4] <= 8'b00000000| dot_col_buf[4];
-				dot_col_buf[5] <= 8'b00000000| dot_col_buf[5];
-				dot_col_buf[6] <= 8'b00000000| dot_col_buf[6];
-				dot_col_buf[7] <= 8'b00000000| dot_col_buf[7];
+				dot_col_buf[0] <= 8'b00001100;
+				dot_col_buf[1] <= 8'b00001100;
+				dot_col_buf[2] <= 8'b00000000;
+				dot_col_buf[3] <= 8'b00000000;
+				dot_col_buf[4] <= 8'b00000000;
+				dot_col_buf[5] <= 8'b00000000;
+				dot_col_buf[6] <= 8'b00000000;
+				dot_col_buf[7] <= 8'b00000000;
 			end
 			5'he: begin
-				dot_col_buf[0] <= 8'b00110000| dot_col_buf[0];
-				dot_col_buf[1] <= 8'b00110000| dot_col_buf[1];
-				dot_col_buf[2] <= 8'b00000000| dot_col_buf[2];
-				dot_col_buf[3] <= 8'b00000000| dot_col_buf[3];
-				dot_col_buf[4] <= 8'b00000000| dot_col_buf[4];
-				dot_col_buf[5] <= 8'b00000000| dot_col_buf[5];
-				dot_col_buf[6] <= 8'b00000000| dot_col_buf[6];
-				dot_col_buf[7] <= 8'b00000000| dot_col_buf[7];
+				dot_col_buf[0] <= 8'b00110000;
+				dot_col_buf[1] <= 8'b00110000;
+				dot_col_buf[2] <= 8'b00000000;
+				dot_col_buf[3] <= 8'b00000000;
+				dot_col_buf[4] <= 8'b00000000;
+				dot_col_buf[5] <= 8'b00000000;
+				dot_col_buf[6] <= 8'b00000000;
+				dot_col_buf[7] <= 8'b00000000;
 			end
 			5'hf: begin
-				dot_col_buf[0] <= 8'b11000000 | dot_col_buf[0];
-				dot_col_buf[1] <= 8'b11000000 | dot_col_buf[1];
-				dot_col_buf[2] <= 8'b00000000 | dot_col_buf[2];
-				dot_col_buf[3] <= 8'b00000000 | dot_col_buf[3];
-				dot_col_buf[4] <= 8'b00000000 | dot_col_buf[4];
-				dot_col_buf[5] <= 8'b00000000 | dot_col_buf[5];
-				dot_col_buf[6] <= 8'b00000000 | dot_col_buf[6];
-				dot_col_buf[7] <= 8'b00000000 | dot_col_buf[7];
+				dot_col_buf[0] <= 8'b11000000;
+				dot_col_buf[1] <= 8'b11000000 ;
+				dot_col_buf[2] <= 8'b00000000 ;
+				dot_col_buf[3] <= 8'b00000000 ;
+				dot_col_buf[4] <= 8'b00000000 ;
+				dot_col_buf[5] <= 8'b00000000 ;
+				dot_col_buf[6] <= 8'b00000000 ;
+				dot_col_buf[7] <= 8'b00000000 ;
 			end
 			default
 			begin
-				dot_col_buf[0] <= 8'b00000000 | dot_col_buf[0];
-				dot_col_buf[1] <= 8'b00000000 | dot_col_buf[1];
-				dot_col_buf[2] <= 8'b00000000 | dot_col_buf[2];
-				dot_col_buf[3] <= 8'b00000000 | dot_col_buf[3];
-				dot_col_buf[4] <= 8'b00000000 | dot_col_buf[4];
-				dot_col_buf[5] <= 8'b00000000 | dot_col_buf[5];
-				dot_col_buf[6] <= 8'b00000000 | dot_col_buf[6];
-				dot_col_buf[7] <= 8'b00000000 | dot_col_buf[7];
+				dot_col_buf[0] <= 8'b00000000 ;
+				dot_col_buf[1] <= 8'b00000000 ;
+				dot_col_buf[2] <= 8'b00000000 ;
+				dot_col_buf[3] <= 8'b00000000 ;
+				dot_col_buf[4] <= 8'b00000000 ;
+				dot_col_buf[5] <= 8'b00000000 ;
+				dot_col_buf[6] <= 8'b00000000 ;
+				dot_col_buf[7] <= 8'b00000000 ;
 			end
 
 
