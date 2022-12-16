@@ -1,0 +1,3 @@
+module Lab12_VGA(clk, reset, vga_R, vga_G, vga_B, vag_HS, vga_VS);
+
+endmodule;
