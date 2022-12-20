@@ -1,5 +1,5 @@
 module Lab12_VGA(clk, reset, r, g, b, vga_R, vga_G, vga_B, vga_HS, vga_VS);
-input clk, reset, r, g, b; //three switch
+input clk, reset, r, g, b; //three buttons for controling color
 output [3:0] vga_R;
 output [3:0] vga_G;
 output [3:0] vga_B;
@@ -35,24 +35,23 @@ FrequencyDivider divClock(.clk(clk), .rst(reset), .div_clk(div_clk));
 always @(negedge reset or negedge r)begin //press reset or red
     if(!reset)begin
         tempRed <= 4'd0;
+    end
+    else 
+        tempRed <= tempRed + 4'd1;
+end
+always @(negedge reset or negedge g) begin //press green
+	if(!reset)begin
         tempGreen <= 4'd0;
+    end
+	else 
+        tempGreen <= tempGreen + 4'd1;
+end
+always @(negedge reset or negedge b) begin //press blue
+    if(!reset)begin
         tempBlue <= 4'd0;
     end
-    else begin
-        if(r == 1'b0) begin
-            tempRed <= tempRed + 4'd1;
-        end
-    end
-end
-always @(negedge g) begin //press green
-    if(g == 1'b0) begin
-            tempGreen <= tempGreen + 4'd1;
-        end
-end
-always @(negedge b) begin //press blue
-    if(b == 1'b0) begin
-            tempBlue <= tempBlue + 4'd1;
-        end
+	else 
+        tempBlue <= tempBlue + 4'd1;
 end
 
 //for row(HS)
@@ -65,6 +64,7 @@ always @(posedge div_clk or negedge reset)begin
         h_count <= h_count + 1'b1;
 end
 assign vga_HS = (h_count < h_pulse) ? 1'b0 : 1'b1;
+
 //for col(VS)
 always @(posedge div_clk or negedge reset)
 begin
@@ -77,12 +77,13 @@ begin
     else
         v_count <=  v_count;                        
 end                
-assign O_vs =   (v_count < v_pulse) ? 1'b0 : 1'b1; 
+assign vga_VS =   (v_count < v_pulse) ? 1'b0 : 1'b1; 
 
-assign W_active_flag =  (h_count >= (h_pulse + h_back           ))  &&
-                        (h_count <= (h_pulse + h_back + h_active))  && 
-                        (v_count >= (v_pulse + v_back           ))  &&
-                        (v_count <= (v_pulse + v_back + v_active))  ;
+assign active_flag =  (h_count >= (h_pulse + h_back - 1'b1    ))  &&
+                      (h_count <  (h_pulse + h_back + h_active))  && 
+                      (v_count >= (v_pulse + v_back - 1'b1    ))  &&
+                      (v_count < (v_pulse + v_back + v_active))
+                      ? 1'b1 : 1'b0;
 
 //show RGB(assign temp to output)
 always @(posedge div_clk or negedge reset) begin

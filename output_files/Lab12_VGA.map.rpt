@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab12_VGA
-Tue Dec 13 14:44:46 2022
+Tue Dec 20 13:31:26 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -10,7 +10,15 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |Lab12_VGA
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -33,22 +41,27 @@ refer to the applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                              ;
-+-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Tue Dec 13 14:44:46 2022           ;
-; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
-; Revision Name               ; Lab12_VGA                                   ;
-; Top-level Entity Name       ; Lab12_VGA                                   ;
-; Family                      ; Cyclone V                                   ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
-; Total registers             ; N/A until Partition Merge                   ;
-; Total pins                  ; N/A until Partition Merge                   ;
-; Total virtual pins          ; N/A until Partition Merge                   ;
-; Total block memory bits     ; N/A until Partition Merge                   ;
-; Total PLLs                  ; N/A until Partition Merge                   ;
-; Total DLLs                  ; N/A until Partition Merge                   ;
-+-----------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Tue Dec 20 13:31:26 2022       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                   ; Lab12_VGA                                   ;
+; Top-level Entity Name           ; Lab12_VGA                                   ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 81                                          ;
+; Total pins                      ; 19                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -147,11 +160,140 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-16        ;   0.0%      ;
 +----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                      ;
++----------------------------------+-----------------+------------------------+-------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path        ; Library ;
++----------------------------------+-----------------+------------------------+-------------------------------------+---------+
+; Lab12_VGA.v                      ; yes             ; User Verilog HDL File  ; C:/Verilog/Lab12/Lab12_VGA.v        ;         ;
+; FrequencyDivider.v               ; yes             ; User Verilog HDL File  ; C:/Verilog/Lab12/FrequencyDivider.v ;         ;
++----------------------------------+-----------------+------------------------+-------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimate of Logic utilization (ALMs needed) ; 53          ;
+;                                             ;             ;
+; Combinational ALUT usage for logic          ; 95          ;
+;     -- 7 input functions                    ; 0           ;
+;     -- 6 input functions                    ; 8           ;
+;     -- 5 input functions                    ; 5           ;
+;     -- 4 input functions                    ; 9           ;
+;     -- <=3 input functions                  ; 73          ;
+;                                             ;             ;
+; Dedicated logic registers                   ; 81          ;
+;                                             ;             ;
+; I/O pins                                    ; 19          ;
+;                                             ;             ;
+; Total DSP Blocks                            ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; reset~input ;
+; Maximum fan-out                             ; 50          ;
+; Total fan-out                               ; 581         ;
+; Average fan-out                             ; 2.71        ;
++---------------------------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                              ;
++--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------+------------------+--------------+
+; Compilation Hierarchy Node     ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                  ; Entity Name      ; Library Name ;
++--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------+------------------+--------------+
+; |Lab12_VGA                     ; 95 (54)             ; 81 (48)                   ; 0                 ; 0          ; 19   ; 0            ; |Lab12_VGA                           ; Lab12_VGA        ; work         ;
+;    |FrequencyDivider:divClock| ; 41 (41)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |Lab12_VGA|FrequencyDivider:divClock ; FrequencyDivider ; work         ;
++--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------+------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 81    ;
+; Number of registers using Synchronous Clear  ; 69    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 48    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 12    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
+; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |Lab12_VGA|v_count[11]                        ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Lab12_VGA|FrequencyDivider:divClock|count[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |Lab12_VGA ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; h_pulse        ; 96    ; Signed Integer                                   ;
+; h_back         ; 48    ; Signed Integer                                   ;
+; h_active       ; 640   ; Signed Integer                                   ;
+; h_front        ; 16    ; Signed Integer                                   ;
+; h_line_period  ; 800   ; Signed Integer                                   ;
+; v_pulse        ; 2     ; Signed Integer                                   ;
+; v_back         ; 33    ; Signed Integer                                   ;
+; v_active       ; 480   ; Signed Integer                                   ;
+; v_front        ; 10    ; Signed Integer                                   ;
+; v_frame_period ; 525   ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 81                          ;
+;     CLR               ; 12                          ;
+;     CLR SCLR          ; 24                          ;
+;     ENA CLR SCLR      ; 12                          ;
+;     SCLR              ; 33                          ;
+; arriav_lcell_comb     ; 96                          ;
+;     arith             ; 56                          ;
+;         1 data inputs ; 56                          ;
+;     normal            ; 40                          ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 8                           ;
+;         4 data inputs ; 9                           ;
+;         5 data inputs ; 5                           ;
+;         6 data inputs ; 8                           ;
+; boundary_port         ; 19                          ;
+;                       ;                             ;
+; Max LUT depth         ; 4.10                        ;
+; Average LUT depth     ; 2.38                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -160,7 +302,7 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Dec 13 14:44:38 2022
+    Info: Processing started: Tue Dec 20 13:31:16 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab12_VGA -c Lab12_VGA
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -168,38 +310,20 @@ Info (12021): Found 1 design units, including 1 entities, in source file lab12_v
     Info (12023): Found entity 1: Lab12_VGA File: C:/Verilog/Lab12/Lab12_VGA.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file frequencydivider.v
     Info (12023): Found entity 1: FrequencyDivider File: C:/Verilog/Lab12/FrequencyDivider.v Line: 4
-Warning (10236): Verilog HDL Implicit Net warning at Lab12_VGA.v(80): created implicit net for "O_vs" File: C:/Verilog/Lab12/Lab12_VGA.v Line: 80
-Warning (10236): Verilog HDL Implicit Net warning at Lab12_VGA.v(82): created implicit net for "W_active_flag" File: C:/Verilog/Lab12/Lab12_VGA.v Line: 82
 Info (12127): Elaborating entity "Lab12_VGA" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at Lab12_VGA.v(80): object "O_vs" assigned a value but never read File: C:/Verilog/Lab12/Lab12_VGA.v Line: 80
-Warning (10036): Verilog HDL or VHDL warning at Lab12_VGA.v(82): object "W_active_flag" assigned a value but never read File: C:/Verilog/Lab12/Lab12_VGA.v Line: 82
-Warning (10858): Verilog HDL warning at Lab12_VGA.v(14): object active_flag used but never assigned File: C:/Verilog/Lab12/Lab12_VGA.v Line: 14
-Warning (10240): Verilog HDL Always Construct warning at Lab12_VGA.v(35): inferring latch(es) for variable "tempGreen", which holds its previous value in one or more paths through the always construct File: C:/Verilog/Lab12/Lab12_VGA.v Line: 35
-Warning (10240): Verilog HDL Always Construct warning at Lab12_VGA.v(35): inferring latch(es) for variable "tempBlue", which holds its previous value in one or more paths through the always construct File: C:/Verilog/Lab12/Lab12_VGA.v Line: 35
-Warning (10030): Net "active_flag" at Lab12_VGA.v(14) has no driver or initial value, using a default initial value '0' File: C:/Verilog/Lab12/Lab12_VGA.v Line: 14
-Warning (10034): Output port "vga_VS" at Lab12_VGA.v(6) has no driver File: C:/Verilog/Lab12/Lab12_VGA.v Line: 6
-Info (10041): Inferred latch for "tempBlue[0]" at Lab12_VGA.v(35) File: C:/Verilog/Lab12/Lab12_VGA.v Line: 35
-Info (10041): Inferred latch for "tempBlue[1]" at Lab12_VGA.v(35) File: C:/Verilog/Lab12/Lab12_VGA.v Line: 35
-Info (10041): Inferred latch for "tempBlue[2]" at Lab12_VGA.v(35) File: C:/Verilog/Lab12/Lab12_VGA.v Line: 35
-Info (10041): Inferred latch for "tempBlue[3]" at Lab12_VGA.v(35) File: C:/Verilog/Lab12/Lab12_VGA.v Line: 35
-Info (10041): Inferred latch for "tempGreen[0]" at Lab12_VGA.v(35) File: C:/Verilog/Lab12/Lab12_VGA.v Line: 35
-Info (10041): Inferred latch for "tempGreen[1]" at Lab12_VGA.v(35) File: C:/Verilog/Lab12/Lab12_VGA.v Line: 35
-Info (10041): Inferred latch for "tempGreen[2]" at Lab12_VGA.v(35) File: C:/Verilog/Lab12/Lab12_VGA.v Line: 35
-Info (10041): Inferred latch for "tempGreen[3]" at Lab12_VGA.v(35) File: C:/Verilog/Lab12/Lab12_VGA.v Line: 35
-Error (10028): Can't resolve multiple constant drivers for net "tempGreen[3]" at Lab12_VGA.v(47) File: C:/Verilog/Lab12/Lab12_VGA.v Line: 47
-Error (10029): Constant driver at Lab12_VGA.v(35) File: C:/Verilog/Lab12/Lab12_VGA.v Line: 35
-Error (10028): Can't resolve multiple constant drivers for net "tempGreen[2]" at Lab12_VGA.v(47) File: C:/Verilog/Lab12/Lab12_VGA.v Line: 47
-Error (10028): Can't resolve multiple constant drivers for net "tempGreen[1]" at Lab12_VGA.v(47) File: C:/Verilog/Lab12/Lab12_VGA.v Line: 47
-Error (10028): Can't resolve multiple constant drivers for net "tempGreen[0]" at Lab12_VGA.v(47) File: C:/Verilog/Lab12/Lab12_VGA.v Line: 47
-Error (10028): Can't resolve multiple constant drivers for net "tempBlue[3]" at Lab12_VGA.v(52) File: C:/Verilog/Lab12/Lab12_VGA.v Line: 52
-Error (10028): Can't resolve multiple constant drivers for net "tempBlue[2]" at Lab12_VGA.v(52) File: C:/Verilog/Lab12/Lab12_VGA.v Line: 52
-Error (10028): Can't resolve multiple constant drivers for net "tempBlue[1]" at Lab12_VGA.v(52) File: C:/Verilog/Lab12/Lab12_VGA.v Line: 52
-Error (10028): Can't resolve multiple constant drivers for net "tempBlue[0]" at Lab12_VGA.v(52) File: C:/Verilog/Lab12/Lab12_VGA.v Line: 52
-Error (12153): Can't elaborate top-level user hierarchy
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 10 errors, 10 warnings
-    Error: Peak virtual memory: 4768 megabytes
-    Error: Processing ended: Tue Dec 13 14:44:46 2022
-    Error: Elapsed time: 00:00:08
-    Error: Total CPU time (on all processors): 00:00:17
+Info (12128): Elaborating entity "FrequencyDivider" for hierarchy "FrequencyDivider:divClock" File: C:/Verilog/Lab12/Lab12_VGA.v Line: 32
+Warning (10230): Verilog HDL assignment warning at FrequencyDivider.v(16): truncated value with size 32 to match size of target (1) File: C:/Verilog/Lab12/FrequencyDivider.v Line: 16
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 126 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 14 output pins
+    Info (21061): Implemented 107 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4902 megabytes
+    Info: Processing ended: Tue Dec 20 13:31:26 2022
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:22
 
 
